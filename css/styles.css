@@ -1,0 +1,389 @@
+/* ============================== */
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ============================== */
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+p {
+  font-size: 18px;
+}
+section {
+  height: 100vh;
+  position: relative;
+}
+section .container {
+  padding: 100px 0;
+}
+section .section-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ============================== */
+/* =========== Intro ============ */
+/* ============================== */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/night-background.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* ============================== */
+
+.image-wrapper {
+  text-align: center;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-width: 125px;
+  max-height: 125px;
+  border-radius: 50%;
+}
+
+/* ============================== */
+
+.text-wrapper {
+  color: #ffffff;
+}
+.text-wrapper p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* ============================== */
+
+.icon-wrapper {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 30px;
+}
+.icon-wrapper i {
+  color: #ffffff;
+  font-size: 60px;
+}
+
+/* ============================== */
+
+@media (min-width: 601px) {
+  .image-wrapper img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media (min-width: 993px) {
+  #intro .row {
+    display: flex;
+  }
+  .image-wrapper {
+    flex: auto;
+    position: relative;
+  }
+  .image-wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/* ============================== */
+/* ========== Projects ========== */
+/* ============================== */
+
+#projects {
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0,0, 0.2)), url('../images/mountain-background.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card-content hr {
+  width: 60px;
+  margin: 10px 0;
+}
+p.title {
+  font-size: 18px;
+  cursor: pointer;
+}
+p.date {
+  font-size: 16px;
+  cursor: pointer;
+}
+#projects li {
+  list-style-type: disc;
+  margin-left: 24px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* ============================== */
+
+@media (min-width: 601px) {
+  p.title {
+    font-size: 20px;
+  }
+  p.date {
+    font-size: 18px;
+  }
+  #projects li {
+    font-size: 18px;
+  }
+}
+
+/* ============================== */
+/* =========== Skills =========== */
+/* ============================== */
+
+#skills {
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0,0, 0.2)), url('../images/purple-background.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+/* ============================== */
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: -2.5em 0 0 -2.5em;
+}
+
+  .tiles article {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    /* width: calc(33.3333333333% - 2.5em); */
+    width: calc(25% - 2.5em);
+    margin: 2.5em 0 0 2.5em;
+  }
+
+    .tiles article > .image {
+      transition: transform 0.5s ease;
+      position: relative;
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+      .tiles article > .image img {
+        display: block;
+        width: 100%;
+      }
+
+      .tiles article > .image:before {
+        pointer-events: none;
+        transition: background-color 0.5s ease, opacity 0.5s ease;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1.0;
+        z-index: 1;
+        opacity: 0.8;
+      }
+
+      .tiles article > .image:after {
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.25;
+        z-index: 2;
+      }
+
+    .tiles article > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.5s ease, transform 0.5s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1em;
+      border-radius: 4px;
+      border-bottom: 0;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      z-index: 3;
+    }
+
+      .tiles article > a > :last-child {
+        margin: 0;
+      }
+
+      .tiles article > a:hover {
+        color: #ffffff !important;
+      }
+
+      .tiles article > a h2 {
+        margin: 0;
+      }
+
+      .tiles article > a .content {
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        width: 100%;
+        max-height: 0;
+        line-height: 1.5;
+        margin-top: 0.35em;
+        opacity: 0;
+      }
+
+        .tiles article > a .content > :last-child {
+          margin-bottom: 0;
+        }
+
+    .tiles article.style1 > .image:before {
+      background-color: #f2849e;
+    }
+
+    .tiles article.style2 > .image:before {
+      background-color: #7ecaf6;
+    }
+
+    .tiles article.style3 > .image:before {
+      background-color: #7bd0c1;
+    }
+
+    .tiles article.style4 > .image:before {
+      background-color: #c75b9b;
+    }
+
+    .tiles article.style5 > .image:before {
+      background-color: #ae85ca;
+    }
+
+    .tiles article.style6 > .image:before {
+      background-color: #8499e7;
+    }
+
+    body:not(.is-touch) .tiles article:hover > .image {
+      transform: scale(1.1);
+    }
+
+      body:not(.is-touch) .tiles article:hover > .image:before {
+        background-color: #333333;
+        opacity: 0.35;
+      }
+
+      body:not(.is-touch) .tiles article:hover > .image:after {
+        opacity: 0;
+      }
+
+    body:not(.is-touch) .tiles article:hover .content {
+      max-height: 15em;
+      opacity: 1;
+    }
+
+  * + .tiles {
+    margin-top: 2em;
+  }
+
+  body.is-preload .tiles article {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  body.is-touch .tiles article .content {
+    max-height: 15em;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1280px) {
+
+    .tiles {
+      margin: -1.25em 0 0 -1.25em;
+    }
+
+      .tiles article {
+        /* width: calc(33.3333333333% - 1.25em); */
+        width: calc(25% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+      }
+
+  }
+
+  @media screen and (max-width: 980px) {
+
+    .tiles {
+      margin: -2.5em 0 0 -2.5em;
+    }
+
+      .tiles article {
+        width: calc(50% - 2.5em);
+        margin: 2.5em 0 0 2.5em;
+      }
+
+  }
+
+  @media screen and (max-width: 736px) {
+
+    .tiles {
+      margin: -1.25em 0 0 -1.25em;
+    }
+
+      .tiles article {
+        width: calc(50% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+      }
+
+        .tiles article:hover > .image {
+          -moz-transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+          -ms-transform: scale(1.0);
+          transform: scale(1.0);
+        }
+
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .tiles {
+      margin: 0;
+    }
+
+      .tiles article {
+        width: 100%;
+        margin: 1.25em 0 0 0;
+      }
+
+  }
