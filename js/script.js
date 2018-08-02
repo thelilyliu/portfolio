@@ -1,7 +1,7 @@
 $(document).ready(function() {
   initParticles()
-
-  eventHandler()
+  initTypeIt()
+  initEventHandler()
 })
 
 function initParticles() {
@@ -123,7 +123,25 @@ function initParticles() {
   })
 }
 
-function eventHandler() {
+function initTypeIt() {
+  new TypeIt('#typeit-roles', {
+    strings: [
+      'Software Developer',
+      'Hackathon Lover',
+      'Machine Learning Enthusiast',
+      'Full-Stack Web Developer',
+      'Public Speaker',
+    ],
+    speed: 100,
+    startDelay: 1000,
+    nextStringDelay: 2000,
+    loop: true,
+    breakLines: false,
+    autoStart: false
+  })
+}
+
+function initEventHandler() {
   $('a.section-scroll').on('click', function(e) {
     var target = $(this.getAttribute('href'))
     if (target.length) {
