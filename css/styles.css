@@ -1,12 +1,5 @@
 /* ============================== */
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/* ============ Main ============ */
 /* ============================== */
 
 body {
@@ -31,6 +24,15 @@ section .section-title {
   color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
+}
+
+/* ============================== */
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ============================== */
@@ -64,18 +66,32 @@ section .section-title {
 .text-wrapper {
   color: #ffffff;
 }
+.text-wrapper h1 {
+  margin-top: 25px;
+}
 .text-wrapper p {
+  margin-bottom: 25px;
   font-size: 20px;
   letter-spacing: 0.5px;
 }
 
 /* ============================== */
 
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
 .icon-wrapper {
-  position: absolute;
+  position: relative;
   width: 100%;
   text-align: center;
-  bottom: 30px;
+  bottom: 96px;
+  animation: bounce .5s cubic-bezier(.5, .05, 1, .5) infinite alternate;
 }
 .icon-wrapper i {
   color: #ffffff;
