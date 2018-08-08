@@ -1,6 +1,7 @@
 $(document).ready(function() {
   initParticles()
   initTypeIt()
+  initMaterialize()
   initEventHandler()
 })
 
@@ -134,10 +135,16 @@ function initTypeIt() {
     ],
     speed: 100,
     startDelay: 1000,
-    nextStringDelay: 2000,
+    nextStringDelay: 2500,
     loop: true,
     breakLines: false,
     autoStart: false
+  })
+}
+
+function initMaterialize() {
+  $(document).ready(function() {
+    $('.parallax').parallax()
   })
 }
 
