@@ -101,7 +101,7 @@ section .section-title {
   position: fixed;
   width: 100%;
   text-align: center;
-  bottom: 96px;
+  bottom: 50px;
   animation: bounce .5s cubic-bezier(.5, .05, 1, .5) infinite alternate;
 }
 .icon-wrapper i {
@@ -400,4 +400,77 @@ ul:not(.browser-default) > li {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/mountain-dawn.jpg');
   background-position: center center;
   background-size: cover;
+}
+
+/* ============================== */
+
+.business .card .card-image .card-title {
+  padding-left: 32px;
+  padding-bottom: 28px;
+}
+.business .card-title .heading {
+  line-height: 1;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.business .card-title .subheading {
+  margin-top: 5px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* ============================== */
+
+.business .card .card-action {
+  padding: 16px 32px;
+  text-align: right;
+}
+.business .card .card-action a {
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* ============================== */
+
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).email {
+  color: #1a237e;
+  text-transform: none;
+  float: left;
+  border-bottom: dotted 1px transparent;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).linkedin {
+  color: #0077b5;
+  border-bottom: dotted 1px transparent;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).github {
+  color: #6e5494;
+  border-bottom: dotted 1px transparent;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).twitter {
+  color: #1da1f2;
+  border-bottom: dotted 1px transparent;
+  transition: all .25s ease;
+  margin-right: 0;
+}
+
+/* ============================== */
+
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).email:hover {
+  border-bottom: dotted 1px #1a237e;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).linkedin:hover {
+  border-bottom: dotted 1px #0077b5;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).github:hover {
+  border-bottom: dotted 1px #6e5494;
+  transition: all .25s ease;
+}
+.business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).twitter:hover {
+  border-bottom: dotted 1px #1da1f2;
+  transition: all .25s ease;
 }
