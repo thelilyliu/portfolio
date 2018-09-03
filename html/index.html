@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../css/styles.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lily Liu</title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito|Quicksand" rel="stylesheet">
@@ -13,15 +14,22 @@
 
   <body>
 
+    <!-- Navigation -->
+
     <div class="navbar-fixed">
       <nav>
-        <a href="#intro">Intro</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#writings">Writings</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-wrapper">
+          <a class="brand-logo"><h4>Lily Liu</h4></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="scroll" scroll-target="#intro">Intro</a></li>
+            <li><a class="scroll" scroll-target="#experience">Experience</a></li>
+            <li><a class="scroll" scroll-target="#education">Education</a></li>
+            <li><a class="scroll" scroll-target="#skills">Skills</a></li>
+            <li><a class="scroll" scroll-target="#projects">Projects</a></li>
+            <li><a class="scroll" scroll-target="#writings">Writings</a></li>
+            <li><a class="scroll" scroll-target="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
 
@@ -44,7 +52,7 @@
       </div>
 
       <div class="icon-wrapper">
-        <a href="#experience" class="section-scroll">
+        <a class="scroll" scroll-target="#experience">
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </div>

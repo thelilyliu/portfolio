@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 18px;
 }
+a.scroll {
+  cursor: pointer;
+}
 
 /* ============================== */
 
@@ -42,18 +45,29 @@ section .section-title {
 /* ========= Navigation ========= */
 /* ============================== */
 
-ul.side-navigation {
-  position: fixed;
-  z-index: 999;
-  top: 50%;
-  transform: translateY(-50%);
+nav {
+  background-color: #2962ff;
+  opacity: .9;
 }
-ul.side-navigation a {
-  color: #e0e0e0;
+nav h4 {
+  margin: 10.5px 20px;
 }
-ul.side-navigation a.active,
-ul.side-navigation a:hover {
-  color: #ffffff;
+nav ul a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 64px;
+}
+nav ul a.active {
+  background-color: rgba(0, 0, 0, .1);
+  border-bottom: solid 2px #ffffff;
+}
+
+/* ============================== */
+
+@media (min-width: 601px) {
+  nav h4 {
+    margin: 13.5px 20px;
+  }
 }
 
 /* ============================== */

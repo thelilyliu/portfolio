@@ -144,9 +144,15 @@ function initTypeIt() {
 }
 
 function initMaterialize() {
-  $(document).ready(function() {
-    $('.scrollspy').scrollSpy()
-  })
+  let elems = document.querySelectorAll('.scrollspy')
+  
+  let options = {
+    getActiveElement: function(id) {
+      return 'a[scroll-target="#' + id + '"]'
+    }
+  }
+  
+  M.ScrollSpy.init(elems, options)
 }
 
 function initMasonry() {
@@ -158,13 +164,19 @@ function initMasonry() {
 }
 
 function initEventHandler() {
-  $('a.section-scroll').on('click', function(e) {
-    var target = $(this.getAttribute('href'))
+  $('a.scroll').on('click', function(e) {
+    let $this = $(this)
+    let target = $(this.getAttribute('scroll-target'))
+
     if (target.length) {
       e.preventDefault()
+
       $('html, body').stop().animate({
         scrollTop: target.offset().top
       }, 750)
+
+      $('a.scroll').removeClass('active')
+      $this.addClass('active')
     }
   })
 }
