@@ -2,6 +2,7 @@ $(document).ready(function() {
   initParticles()
   initTypeIt()
   initMaterialize()
+  initMasonry()
   initEventHandler()
 })
 
@@ -144,7 +145,15 @@ function initTypeIt() {
 
 function initMaterialize() {
   $(document).ready(function() {
-    $('.parallax').parallax()
+    $('.scrollspy').scrollSpy()
+  })
+}
+
+function initMasonry() {
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
   })
 }
 
@@ -155,7 +164,7 @@ function initEventHandler() {
       e.preventDefault()
       $('html, body').stop().animate({
         scrollTop: target.offset().top
-      }, 1000)
+      }, 750)
     }
   })
 }

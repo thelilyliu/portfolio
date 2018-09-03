@@ -13,9 +13,21 @@
 
   <body>
 
+    <div class="navbar-fixed">
+      <nav>
+        <a href="#intro">Intro</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#writings">Writings</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
     <!-- Intro -->
 
-    <section id="intro">
+    <section id="intro" class="scrollspy">
       <div id="particles-js"></div>
 
       <div class="container center">
@@ -40,7 +52,7 @@
 
     <!-- Experience -->
 
-    <section id="experience">
+    <section id="experience" class="scrollspy">
       <div class="container">
 
         <div class="row">
@@ -154,17 +166,9 @@
       </div>
     </section>
 
-    <!-- Parallax -->
-
-    <!-- <div class="parallax-container">
-      <div class="parallax">
-        <img style="width: 100%; z-index: 100;" src="../others/bg4.jpg">
-      </div>
-    </div> -->
-
     <!-- Education -->
 
-    <section id="education">
+    <section id="education" class="scrollspy">
       <div class="container">
         
         <div class="row">
@@ -208,7 +212,7 @@
 
     <!-- Skills -->
 
-    <section id="skills">
+    <section id="skills" class="scrollspy">
       <div class="container">
         <div class="row">
           <div class="col s12">
@@ -380,7 +384,7 @@
 
     <!-- Projects -->
 
-    <section id="projects">
+    <section id="projects" class="scrollspy">
       <div class="container">
 
         <div class="row">
@@ -466,9 +470,101 @@
       </div>
     </section>
 
+    <!-- Writings -->
+
+    <section id="writings" class="scrollspy">
+      <div class="container">
+
+        <div class="row">
+          <div class="col s12">
+            <h2 class="section-title">Writings</h2>
+          </div>
+        </div>
+
+        <div class="grid">
+
+          <div class="grid-sizer"></div>
+
+          <div class="grid-item">
+            <div class="card round">
+              <div class="card-image">
+                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
+                  <img src="../images/writings/article3.jpg">
+                </a>
+              </div>
+              <div class="card-content">
+                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
+                  <p>Beyond the Hackathon: TD Level Up Quest</p>
+                </a>
+              </div>
+              <div class="card-action">
+                <span>Published on September 4, 2018</span>
+
+                <div class="article-stats">
+                  <span><i class="material-icons tiny">thumb_up</i> 0</span>
+                  <span><i class="material-icons tiny">comment</i> 0</span>
+                  <span><i class="material-icons tiny">share</i> 0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card round">
+              <div class="card-image">
+                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
+                  <img src="../images/writings/article2.jpg">
+                </a>
+              </div>
+              <div class="card-content">
+                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
+                  <p>Think Big: Lessons from Google Cloud Sprint</p>
+                </a>
+              </div>
+              <div class="card-action">
+                <span>Published on July 2, 2018</span>
+
+                <div class="article-stats">
+                  <span><i class="material-icons tiny">thumb_up</i> 76</span>
+                  <span><i class="material-icons tiny">comment</i> 2</span>
+                  <span><i class="material-icons tiny">share</i> 5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="card round">
+              <div class="card-image">
+                <a href="https://www.linkedin.com/pulse/how-i-learned-machine-learning-three-days-microsoft-openhack-lily-liu/" target="_blank">
+                  <img src="../images/writings/article1.jpg">
+                </a>
+              </div>
+              <div class="card-content">
+                <a href="https://www.linkedin.com/pulse/how-i-learned-machine-learning-three-days-microsoft-openhack-lily-liu/" target="_blank">
+                  <p>How I Learned Machine Learning in Three Days: Microsoft OpenHack</p>
+                </a>
+              </div>
+              <div class="card-action">
+                  <span>Published on June 11, 2018</span>
+  
+                  <div class="article-stats">
+                      <span><i class="material-icons tiny">thumb_up</i> 50</span>
+                      <span><i class="material-icons tiny">comment</i> 2</span>
+                      <span><i class="material-icons tiny">share</i> 5</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- Contact -->
 
-    <section id="contact">
+    <section id="contact" class="scrollspy">
       <div class="container">
         <div class="row">
           <div class="col s12">
@@ -478,7 +574,7 @@
 
         <div class="row">
           <div class="col m8 offset-m2 business">
-            <div class="card">
+            <div class="card round">
               <div class="card-image">
                 <img src="../images/contact/purple-landscape.jpg">
                 <span class="card-title">
@@ -504,6 +600,7 @@
     <script type="text/javascript" src="../js/materialize.min.js"></script>
     <script type="text/javascript" src="../js/particles.min.js"></script>
     <script type="text/javascript" src="../js/typeit.min.js"></script>
+    <script type="text/javascript" src="../js/masonry.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
 
   </body>
