@@ -178,7 +178,7 @@ function initWaypoints() {
         M.Toast.dismissAll()
       }
     },
-    offset: '25%'
+    offset: '40%'
   })
 }
 

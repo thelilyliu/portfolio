@@ -190,6 +190,7 @@ nav ul a.active {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/sky-clouds.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* ============================== */
@@ -273,6 +274,7 @@ nav ul a.active {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/backgrounds/mountain-light.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* ============================== */
@@ -349,6 +351,7 @@ nav ul a.active {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/purple.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 #projects .featured .card {
   margin-bottom: 75px;
@@ -387,6 +390,7 @@ nav ul a.active {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/blue.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* ============================== */
@@ -495,6 +499,7 @@ nav ul a.active {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/mountain-dawn.jpg');
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* ============================== */
