@@ -1,10 +1,23 @@
 $(document).ready(function() {
+  initMaterialize()
   initParticles()
   initTypeIt()
-  initMaterialize()
+  initWaypoints()
   initMasonry()
   initEventHandler()
 })
+
+function initMaterialize() {
+  let elems = document.querySelectorAll('.scrollspy')
+  
+  let options = {
+    getActiveElement: function(id) {
+      return 'a[scroll-target="#' + id + '"]'
+    }
+  }
+  
+  M.ScrollSpy.init(elems, options)
+}
 
 function initParticles() {
   particlesJS('particles-js', {
@@ -143,23 +156,40 @@ function initTypeIt() {
   })
 }
 
-function initMaterialize() {
-  let elems = document.querySelectorAll('.scrollspy')
-  
-  let options = {
-    getActiveElement: function(id) {
-      return 'a[scroll-target="#' + id + '"]'
-    }
-  }
-  
-  M.ScrollSpy.init(elems, options)
+function initWaypoints() {
+  let waypoint1 = new Waypoint({
+    element: $('.waypoint.first'),
+    handler: function(direction) {
+      if (direction === 'down') {
+        M.toast({ html: '<i class="material-icons">chevron_left</i> Scroll me!' })
+      } else {
+        M.Toast.dismissAll()
+      }
+    },
+    offset: '40%'
+  })
+
+  let waypoint2 = new Waypoint({
+    element: $('.waypoint.last'),
+    handler: function(direction) {
+      if (direction === 'down') {
+        M.toast({ html: '<i class="material-icons">chevron_left</i> Scroll me!' })
+      } else {
+        M.Toast.dismissAll()
+      }
+    },
+    offset: '25%'
+  })
 }
 
 function initMasonry() {
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
+  // init Masonry after all images have loaded
+  let $grid = $('.grid').imagesLoaded(function() {
+    $grid.masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    })
   })
 }
 
@@ -177,6 +207,18 @@ function initEventHandler() {
 
       $('a.scroll').removeClass('active')
       $this.addClass('active')
+    }
+  })
+
+  let $nav = $('nav')
+
+  $(window).on('scroll', function() {
+    let section = $('a.scroll.active').attr('scroll-target')
+
+    if (section === '#intro') {
+      $nav.css('background-color', 'transparent')
+    } else {
+      $nav.css('background-color', '#263238')
     }
   })
 }
