@@ -195,6 +195,7 @@ function initMasonry() {
 }
 
 function initStyles() {
+  console.log('initStyles')
   let windowWidth = $(window).width()
 
   /* ============================== */
@@ -211,20 +212,20 @@ function initStyles() {
   let $lastSingle = $('.tile.single:eq(7)').parent()
 
   if (windowWidth <= 992) { // mobile
+    $lastSingle.css('display', 'block');
     $firstDouble.insertBefore($firstSingle)
+    $rightSingle.insertBefore($rightDouble)
     $lastDouble.insertAfter($lastSingle)
-    $rightSingle.insertBefore($rightDouble)
-    $lastSingle.css('display', 'block');
   } else if (windowWidth <= 1200) { // tablet
+    $lastSingle.css('display', 'none')
     $firstDouble.insertBefore($firstSingle)
-    $lastSingle.insertAfter($lastDouble)
     $rightDouble.insertBefore($rightSingle)
-    $lastSingle.css('display', 'none');
-  } else { // desktop
-    $firstSingle.insertBefore($firstDouble)
     $lastSingle.insertAfter($lastDouble)
+  } else if (windowWidth > 1200) { // desktop
+    $lastSingle.css('display', 'block')
+    $firstSingle.insertBefore($firstDouble)
     $rightSingle.insertBefore($rightDouble)
-    $lastSingle.css('display', 'block');
+    $lastSingle.insertAfter($lastDouble)
   }
 
   let height = $('.tile.single img').height()
@@ -236,7 +237,7 @@ function initStyles() {
 
   let $contactCard = $('#contact .card')
   let $contactImg = $('#contact .card-image img')
-  const contactImgSrcBase = '../images/contact/lake-crescent-'
+  const contactImgSrcBase = '../images/contact/profile-'
 
   if (windowWidth <= 600) { // mobile
     $contactCard.removeClass('horizontal')
@@ -244,7 +245,7 @@ function initStyles() {
   } else if (windowWidth <= 992) { // tablet
     $contactCard.addClass('horizontal')
     $contactImg.attr('src', contactImgSrcBase + 'portrait.jpg')
-  } else { // desktop
+  } else if (windowWidth > 993) { // desktop
     $contactCard.addClass('horizontal')
     $contactImg.attr('src', contactImgSrcBase + 'square.jpg')
   }
@@ -267,19 +268,11 @@ function initEventHandler() {
     }
   })
 
-  let $nav = $('nav')
-
-  $(window).on('scroll', function() {
-    // let section = $('a.scroll.active').attr('scroll-target')
-
-    // if (section === '#intro') {
-    //   $nav.css('background-color', 'transparent')
-    // } else {
-    //   $nav.css('background-color', '#263238')
-    // }
-  })
-
   $(window).resize(function() {
-    initStyles()
+    let timeout = false // holder for timeout ID
+    let delay = 250 // delay after event is "complete" to run callback
+
+    clearTimeout(timeout)
+    timeout = setTimeout(initStyles, delay)
   })
 }

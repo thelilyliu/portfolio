@@ -72,8 +72,8 @@ nav {
   width: 100%;
 }
 nav .logo-icon img {
-  height: 40px;
-  margin: 8px 16px;
+  height: 24px;
+  margin: 16px;
   position: relative;
   float: left;
 }
@@ -100,7 +100,7 @@ nav ul a.active {
 
 @media (min-width: 601px) {
   nav .logo-icon img {
-    margin: 12px 16px;
+    margin: 20px;
   }
   nav .logo-title h5 {
     margin: 17px 0;
@@ -116,7 +116,7 @@ nav ul a.active {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: url('../images/backgrounds/night.jpg');
+  background-image: url('../images/intro/background.jpg');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -228,13 +228,20 @@ nav ul a.active {
   }
 }
 
+@media (min-width: 1200px) {
+  .image-wrapper img {
+    max-width: 225px;
+    max-height: 225px;
+  }
+}
+
 /* ============================== */
 /* ========= Experience ========= */
 /* ============================== */
 
 #experience {
   height: 100%;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/sky-clouds.jpg');
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../images/experience/background.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -345,7 +352,7 @@ nav ul a.active {
 
 #skills {
   height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/backgrounds/mountain-light.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/skills/background.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -447,51 +454,12 @@ nav ul a.active {
 }
 
 /* ============================== */
-/* ========== Projects ========== */
-/* ============================== */
-
-#projects {
-  height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/purple.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-#projects .featured .card {
-  margin-bottom: 75px;
-}
-
-/* ============================== */
-
-.computer-wrapper {
-  position: relative;
-  margin-bottom: 125px;
-}
-.computer-wrapper.last {
-  margin-bottom: 0;
-}
-.computer-wrapper img.computer {
-  width: 100%;
-}
-.computer-wrapper .img-wrapper {
-  position: absolute;
-  top: 42px;
-  left: 41px;
-  width: 905px;
-  height: 508px;
-  overflow: scroll;
-}
-.computer-wrapper .img-wrapper img {
-  width: 100%;
-}
-
-/* ============================== */
 /* ========== Writings ========== */
 /* ============================== */
 
 #writings {
   height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/blue.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/writings/background.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -613,7 +581,7 @@ nav ul a.active {
 
 #contact {
   height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/backgrounds/mountain-dawn.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/contact/background.jpg');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -675,23 +643,6 @@ nav ul a.active {
 
 /* ============================== */
 
-.business .card .card-image .card-title {
-  padding-left: 32px;
-  padding-bottom: 28px;
-}
-.business .card-title .heading {
-  line-height: 1;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-.business .card-title .subheading {
-  margin-top: 5px;
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-
-/* ============================== */
-
 #contact .card .card-action {
   padding: 8px 32px;
   text-align: right;
@@ -705,13 +656,6 @@ nav ul a.active {
 
 /* ============================== */
 
-/* .business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).email {
-  color: #1da1f2;
-  text-transform: none;
-  float: left;
-  border-bottom: dotted 1px transparent;
-  transition: all .25s ease;
-} */
 #contact .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).linkedin img {
   color: #0077B5;
   border-bottom: dotted 1px transparent;
@@ -731,10 +675,6 @@ nav ul a.active {
 
 /* ============================== */
 
-/* .business .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).email:hover {
-  border-bottom: dotted 1px #1da1f2;
-  transition: all .25s ease;
-} */
 #contact .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).linkedin:hover img {
   border-bottom: dotted 1px #0077B5;
   transition: all .25s ease;
