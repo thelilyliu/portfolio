@@ -4,6 +4,7 @@ $(document).ready(function() {
   initTypeIt()
   initWaypoints()
   initMasonry()
+  initStyles()
   initEventHandler()
 })
 
@@ -143,8 +144,8 @@ function initTypeIt() {
     strings: [
       'Software Developer',
       'Hackathon Lover',
-      'Machine Learning Enthusiast',
-      'Full-Stack Web Developer',
+      'Machine Learning Developer',
+      'Project Manager',
       'Public Speaker',
     ],
     speed: 100,
@@ -157,7 +158,7 @@ function initTypeIt() {
 }
 
 function initWaypoints() {
-  let waypoint1 = new Waypoint({
+  /* let waypoint1 = new Waypoint({
     element: $('.waypoint.first'),
     handler: function(direction) {
       if (direction === 'down') {
@@ -167,9 +168,9 @@ function initWaypoints() {
       }
     },
     offset: '40%'
-  })
+  }) */
 
-  let waypoint2 = new Waypoint({
+  /* let waypoint2 = new Waypoint({
     element: $('.waypoint.last'),
     handler: function(direction) {
       if (direction === 'down') {
@@ -179,7 +180,7 @@ function initWaypoints() {
       }
     },
     offset: '40%'
-  })
+  }) */
 }
 
 function initMasonry() {
@@ -191,6 +192,62 @@ function initMasonry() {
       percentPosition: true
     })
   })
+}
+
+function initStyles() {
+  let windowWidth = $(window).width()
+
+  /* ============================== */
+  // Skills
+  /* ============================== */
+
+  let $firstDouble = $('.tile.double:eq(0)').parent()
+  let $firstSingle = $('.tile.single:eq(0)').parent()
+  
+  let $rightDouble = $('.tile.double:eq(2)').parent()
+  let $rightSingle = $('.tile.single:eq(5)').parent()
+
+  let $lastDouble = $('.tile.double:eq(3)').parent()
+  let $lastSingle = $('.tile.single:eq(7)').parent()
+
+  if (windowWidth <= 992) { // mobile
+    $firstDouble.insertBefore($firstSingle)
+    $lastDouble.insertAfter($lastSingle)
+    $rightSingle.insertBefore($rightDouble)
+    $lastSingle.css('display', 'block');
+  } else if (windowWidth <= 1200) { // tablet
+    $firstDouble.insertBefore($firstSingle)
+    $lastSingle.insertAfter($lastDouble)
+    $rightDouble.insertBefore($rightSingle)
+    $lastSingle.css('display', 'none');
+  } else { // desktop
+    $firstSingle.insertBefore($firstDouble)
+    $lastSingle.insertAfter($lastDouble)
+    $rightSingle.insertBefore($rightDouble)
+    $lastSingle.css('display', 'block');
+  }
+
+  let height = $('.tile.single img').height()
+  $('.tile.double img').css('height', height)
+
+  /* ============================== */
+  // Contact
+  /* ============================== */
+
+  let $contactCard = $('#contact .card')
+  let $contactImg = $('#contact .card-image img')
+  const contactImgSrcBase = '../images/contact/lake-crescent-'
+
+  if (windowWidth <= 600) { // mobile
+    $contactCard.removeClass('horizontal')
+    $contactImg.attr('src', contactImgSrcBase + 'landscape.jpg')
+  } else if (windowWidth <= 992) { // tablet
+    $contactCard.addClass('horizontal')
+    $contactImg.attr('src', contactImgSrcBase + 'portrait.jpg')
+  } else { // desktop
+    $contactCard.addClass('horizontal')
+    $contactImg.attr('src', contactImgSrcBase + 'square.jpg')
+  }
 }
 
 function initEventHandler() {
@@ -213,12 +270,16 @@ function initEventHandler() {
   let $nav = $('nav')
 
   $(window).on('scroll', function() {
-    let section = $('a.scroll.active').attr('scroll-target')
+    // let section = $('a.scroll.active').attr('scroll-target')
 
-    if (section === '#intro') {
-      $nav.css('background-color', 'transparent')
-    } else {
-      $nav.css('background-color', '#263238')
-    }
+    // if (section === '#intro') {
+    //   $nav.css('background-color', 'transparent')
+    // } else {
+    //   $nav.css('background-color', '#263238')
+    // }
+  })
+
+  $(window).resize(function() {
+    initStyles()
   })
 }
