@@ -150,6 +150,9 @@ nav ul a:hover {
   max-height: 125px;
   border-radius: 50%;
 }
+body.ios .image-wrapper {
+  padding-top: 56px;
+}
 
 /* ============================== */
 
@@ -178,6 +181,9 @@ nav ul a:hover {
 /* ============================== */
 
 body.mobile .text-wrapper p.education .one-line {
+  display: none;
+}
+.text-wrapper p.education .two-lines {
   display: none;
 }
 body.mobile .text-wrapper p.education .two-lines {
