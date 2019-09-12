@@ -64,7 +64,7 @@ section .section-title {
 /* ============ Mobile ========== */
 /* ============================== */
 
-body.mobile:before {
+body.mobile #experience:before {
   content: "";
   display: block;
   position: fixed;
