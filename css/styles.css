@@ -201,7 +201,7 @@ nav ul a:hover {
 /* ============================== */
 
 body.ios .image-wrapper {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 body.mobile .text-wrapper p.education,
 body.mobile .icon-wrapper {
