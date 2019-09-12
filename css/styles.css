@@ -177,6 +177,15 @@ nav ul a:hover {
 
 /* ============================== */
 
+body.mobile .text-wrapper p.education .one-line {
+  display: none;
+}
+body.mobile .text-wrapper p.education .two-lines {
+  display: inline;
+}
+
+/* ============================== */
+
 @keyframes bounce {
   from {
     transform: translateY(0);
@@ -192,6 +201,9 @@ nav ul a:hover {
   text-align: center;
   bottom: 50px;
   animation: bounce .5s cubic-bezier(.5, .05, 1, .5) infinite alternate;
+}
+body.mobile .icon-wrapper {
+  display: none;
 }
 .icon-wrapper i {
   color: #ffffff;
@@ -607,6 +619,7 @@ body.mobile #writings {
 body.mobile #contact {
   background-color: #7dafaa;
   background-image: none;
+  padding-bottom: 50px;
 }
 
 /* ============================== */
@@ -617,6 +630,10 @@ body.mobile #contact {
 #contact .card-image img {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+#contact .card:not(.horizontal) .card-image img {
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
 }
 
 /* ============================== */
