@@ -23,14 +23,7 @@ function initMobile() {
   let isIos = isIphone || isIpod || isIpad
 
   if (isMobile) {
-    if (isIos) {
-      alert('is ios')
-      $('body').addClass('ios')
-    }
-    else {
-      alert('not ios')
-    }
-
+    if (isIos) $('body').addClass('ios')
     $('body').addClass('mobile')
   }
 }
@@ -222,12 +215,14 @@ function initMasonry() {
 }
 
 function initStyles() {
-  console.log('initStyles')
   let windowWidth = $(window).width()
 
   /* ============================== */
   // Skills
   /* ============================== */
+
+  let height = $('.tile.single img').height()
+  $('.tile.double img').css('height', height)
 
   let $firstDouble = $('.tile.double:eq(0)').parent()
   let $firstSingle = $('.tile.single:eq(0)').parent()
@@ -254,9 +249,6 @@ function initStyles() {
     $rightSingle.insertBefore($rightDouble)
     $lastSingle.insertAfter($lastDouble)
   }
-
-  let height = $('.tile.single img').height()
-  $('.tile.double img').css('height', height)
 
   /* ============================== */
   // Contact
