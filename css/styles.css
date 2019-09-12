@@ -150,9 +150,6 @@ nav ul a:hover {
   max-height: 125px;
   border-radius: 50%;
 }
-body.ios .image-wrapper {
-  padding-top: 100px;
-}
 
 /* ============================== */
 
@@ -180,18 +177,6 @@ body.ios .image-wrapper {
 
 /* ============================== */
 
-body.mobile .text-wrapper p.education .one-line {
-  display: none;
-}
-.text-wrapper p.education .two-lines {
-  display: none;
-}
-body.mobile .text-wrapper p.education .two-lines {
-  display: inline;
-}
-
-/* ============================== */
-
 @keyframes bounce {
   from {
     transform: translateY(0);
@@ -208,12 +193,19 @@ body.mobile .text-wrapper p.education .two-lines {
   bottom: 50px;
   animation: bounce .5s cubic-bezier(.5, .05, 1, .5) infinite alternate;
 }
-body.mobile .icon-wrapper {
-  display: none;
-}
 .icon-wrapper i {
   color: #ffffff;
   font-size: 60px;
+}
+
+/* ============================== */
+
+body.ios .image-wrapper {
+  padding-top: 100px;
+}
+body.mobile .text-wrapper p.education,
+body.mobile .icon-wrapper {
+  display: none;
 }
 
 /* ============================== */
@@ -625,6 +617,8 @@ body.mobile #writings {
 body.mobile #contact {
   background-color: #7dafaa;
   background-image: none;
+}
+body.mobile #contact .container {
   padding-bottom: 50px;
 }
 
