@@ -61,26 +61,6 @@ section .section-title {
 }
 
 /* ============================== */
-/* ============ Mobile ========== */
-/* ============================== */
-
-body.mobile #experience:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url('../images/experience/background.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* ============================== */
 /* ========= Navigation ========= */
 /* ============================== */
 
@@ -272,6 +252,10 @@ nav ul a:hover {
   background-size: cover;
   background-attachment: fixed;
 }
+body.mobile #experience {
+  background-color: #1987af;
+  background-image: none;
+}
 
 /* ============================== */
 
@@ -383,6 +367,10 @@ nav ul a:hover {
   background-size: cover;
   background-attachment: fixed;
 }
+body.mobile #skills {
+  background-color: #96a5c8;
+  background-image: none;
+}
 
 /* ============================== */
 
@@ -489,6 +477,10 @@ nav ul a:hover {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body.mobile #writings {
+  background-color: #506496;
+  background-image: none;
 }
 
 /* ============================== */
@@ -612,6 +604,13 @@ nav ul a:hover {
   background-size: cover;
   background-attachment: fixed;
 }
+body.mobile #contact {
+  background-color: #7dafaa;
+  background-image: none;
+}
+
+/* ============================== */
+
 #contact .card {
   border-radius: 5px;
 }
