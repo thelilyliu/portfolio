@@ -27,7 +27,7 @@ const largeDesktopNumColumns = 4
 const largeDesktopPaddingValue = 11.25
 
 let $skillsRow = $('#skills .row')
-let $tileImages = $('.tile img')
+let $tileImages = $('.tile img.primary')
 let $firstDouble = $('.tile.double:eq(0)').parent()
 let $firstSingle = $('.tile.single:eq(0)').parent()
 let $rightDouble = $('.tile.double:eq(2)').parent()
@@ -240,40 +240,6 @@ function initEventHandler() {
       $this.addClass('active')
     }
   })
-
-  // $('#writings .activator').on('click', function(e) {
-  //   e.preventDefault()
-  //   let $card = $(this).closest('.card')
-  //   // $card.addClass('open')
-  // })
-
-  // $('#writings a.card-reveal-close').on('click', function(e) {
-  //   let $card = $(this).closest('.card')
-  //   let $cardReveal = $(this).parent()
-
-  //   // $card.css('overflow', 'visible')
-  //   // $cardReveal.css('display', 'none')
-
-  //   // $cardReveal.css({
-  //   //   display: 'none',
-  //   //   transform: 'translateY(0%)'
-  //   // })
-
-  //   // $card.removeClass('open')
-
-  //   // $cardReveal.css('transition', 'all .25s ease')
-  //   // $cardReveal.css('display', 'none')
-  //   // $cardReveal.css('transform', 'translateY(0%)')
-
-    
-
-  //   // $cardReveal.animate({
-  //   //   display: 'none',
-  //   //   transform: 'translateY(0%)'
-  //   // }, 1000, function() {
-  //   //   // Animation complete.
-  //   // })
-  // })
 
   $(window).resize(function() {
     let timeout = false // holder for timeout ID

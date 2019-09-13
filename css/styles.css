@@ -428,12 +428,19 @@ body.mobile #skills {
   margin-bottom: 15px;
   max-height: 200px;
 }
-.tile img {
+.tile img.primary {
   width: 100%;
   border-radius: 5px;
   opacity: 0.75;
   transition: all .25s ease;
   max-height: 200px;
+}
+.tile img.icon {
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
 }
 .tile .external-link {
   position: absolute;
@@ -479,7 +486,7 @@ body.mobile #skills {
 
 /* ============================== */
 
-.tile:hover img {
+.tile:hover img.primary {
   opacity: 1;
   transition: all .25s ease;
 }
@@ -502,7 +509,7 @@ body.mobile #skills {
   .tile {
     max-height: 150px;
   }
-  .tile img {
+  .tile img.primary {
     max-height: 150px;
   }  
 }
@@ -511,7 +518,7 @@ body.mobile #skills {
   .tile {
     max-height: 175px;
   }
-  .tile img {
+  .tile img.primary {
     max-height: 175px;
   }  
 }
