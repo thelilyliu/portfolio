@@ -3,10 +3,45 @@ $(document).ready(function() {
   initMaterialize()
   initParticles()
   initTypeIt()
-  initStyles()
   initMasonry()
   initEventHandler()
+  setScreenSize()
 })
+
+/* ============================== */
+// Global
+/* ============================== */
+
+let globalScreenSize = ''
+
+/* ============================== */
+// Skills
+/* ============================== */
+
+const skillsImgRatio = 326 / 353
+const mobileTabletNumColumns = 2
+const mobileTabletPaddingValue = 10.5
+const desktopNumColumns = 3
+const desktopPaddingValue = 10.875
+const largeDesktopNumColumns = 4
+const largeDesktopPaddingValue = 11.25
+
+let $skillsRow = $('#skills .row')
+let $tileImages = $('.tile img')
+let $firstDouble = $('.tile.double:eq(0)').parent()
+let $firstSingle = $('.tile.single:eq(0)').parent()
+let $rightDouble = $('.tile.double:eq(2)').parent()
+let $rightSingle = $('.tile.single:eq(5)').parent()
+let $lastDouble = $('.tile.double:eq(3)').parent()
+let $lastSingle = $('.tile.single:eq(7)').parent()
+
+/* ============================== */
+// Contact
+/* ============================== */
+
+const contactImgSrcBase = 'images/contact/profile-'
+let $contactCard = $('#contact .card')
+let $contactImg = $('#contact .card-image img')
 
 function initMobile() {
   let isMobile = false
@@ -176,84 +211,6 @@ function initTypeIt() {
   })
 }
 
-/* ============================== */
-// Skills
-/* ============================== */
-
-const skillsImgRatio = 326 / 353
-const mobileNumColumns = 2
-const mobilePaddingValue = 10.5
-const tabletNumColumns = 3
-const tabletPaddingValue = 10.875
-const desktopNumColumns = 4
-const desktopPaddingValue = 11.25
-
-let $skillsRow = $('#skills .row')
-let $tileImages = $('.tile img')
-let $firstDouble = $('.tile.double:eq(0)').parent()
-let $firstSingle = $('.tile.single:eq(0)').parent()
-let $rightDouble = $('.tile.double:eq(2)').parent()
-let $rightSingle = $('.tile.single:eq(5)').parent()
-let $lastDouble = $('.tile.double:eq(3)').parent()
-let $lastSingle = $('.tile.single:eq(7)').parent()
-
-/* ============================== */
-// Contact
-/* ============================== */
-
-const contactImgSrcBase = 'images/contact/profile-'
-let $contactCard = $('#contact .card')
-let $contactImg = $('#contact .card-image img')
-
-function initStyles() {
-  let windowWidth = $(window).width()
-
-  /* ============================== */
-  // Skills
-  /* ============================== */
-
-  if (windowWidth <= 992) { // mobile
-    let height = ($skillsRow.width() / mobileNumColumns - mobilePaddingValue * 2) * skillsImgRatio
-    $tileImages.css('height', height)
-
-    $lastSingle.css('display', 'block');
-    $firstDouble.insertBefore($firstSingle)
-    $rightSingle.insertBefore($rightDouble)
-    $lastDouble.insertAfter($lastSingle)
-  } else if (windowWidth <= 1200) { // tablet
-    let height = ($skillsRow.width() / tabletNumColumns - tabletPaddingValue * 2) * skillsImgRatio
-    $tileImages.css('height', height)
-
-    $lastSingle.css('display', 'none')
-    $firstDouble.insertBefore($firstSingle)
-    $rightDouble.insertBefore($rightSingle)
-    $lastSingle.insertAfter($lastDouble)
-  } else if (windowWidth > 1200) { // desktop
-    let height = ($skillsRow.width() / desktopNumColumns - desktopPaddingValue * 2) * skillsImgRatio
-    $tileImages.css('height', height)
-
-    $lastSingle.css('display', 'block')
-    $firstSingle.insertBefore($firstDouble)
-    $rightSingle.insertBefore($rightDouble)
-    $lastSingle.insertAfter($lastDouble)
-  }
-
-  /* ============================== */
-  // Contact
-  /* ============================== */
-
-  if (windowWidth <= 600) { // mobile
-    $contactCard.removeClass('horizontal')
-    $contactImg.attr('src', contactImgSrcBase + 'landscape.jpg')
-  } else if (windowWidth <= 992) { // tablet
-    $contactCard.addClass('horizontal')
-    $contactImg.attr('src', contactImgSrcBase + 'portrait.jpg')
-  } else if (windowWidth > 993) { // desktop
-    $contactCard.addClass('horizontal')
-    $contactImg.attr('src', contactImgSrcBase + 'square.jpg')
-  }
-}
-
 function initMasonry() {
   // init Masonry after all images have loaded
   let $grid = $('.grid').imagesLoaded(function() {
@@ -287,6 +244,90 @@ function initEventHandler() {
     let delay = 500 // delay after event is "complete" to run callback
 
     clearTimeout(timeout)
-    timeout = setTimeout(initStyles, delay)
+    timeout = setTimeout(setScreenSize, delay)
   })
+}
+
+function setScreenSize() {
+  let windowWidth = $(window).width()
+  let screenSize = ''
+
+  if (windowWidth <= 600) { // mobile
+    screenSize = 'mobile'
+  } else if (windowWidth <= 992) { // tablet
+    screenSize = 'tablet'
+  } else if (windowWidth <= 1200) { // desktop
+    screenSize = 'desktop'
+  } else if (windowWidth > 1200) { // largeDesktop
+    screenSize = 'largeDesktop'
+  }
+
+  if (screenSize != globalScreenSize) {
+    globalScreenSize = screenSize
+    setSkillsLayout()
+    setContactLayout()
+  }
+
+  setSkillsStyles()
+}
+
+function setSkillsStyles() {
+  let height = 0
+
+  switch (globalScreenSize) {
+    case 'mobile':
+    case 'tablet':
+      height = ($skillsRow.width() / mobileTabletNumColumns - mobileTabletPaddingValue * 2) * skillsImgRatio
+      break
+    case 'desktop':
+      height = ($skillsRow.width() / desktopNumColumns - desktopPaddingValue * 2) * skillsImgRatio
+      break
+    case 'largeDesktop':
+      height = ($skillsRow.width() / largeDesktopNumColumns - largeDesktopPaddingValue * 2) * skillsImgRatio
+      break
+  }
+
+  $tileImages.css('height', height)
+}
+
+function setSkillsLayout() {
+  switch (globalScreenSize) {
+    case 'mobile':
+    case 'tablet':
+      $lastSingle.css('display', 'block')
+      $firstDouble.insertBefore($firstSingle)
+      $rightSingle.insertBefore($rightDouble)
+      $lastDouble.insertAfter($lastSingle)
+      break
+    case 'desktop':
+      $lastSingle.css('display', 'none')
+      $firstDouble.insertBefore($firstSingle)
+      $rightDouble.insertBefore($rightSingle)
+      $lastSingle.insertAfter($lastDouble)
+      break
+    case 'largeDesktop':
+      $lastSingle.css('display', 'block')
+      $firstSingle.insertBefore($firstDouble)
+      $rightSingle.insertBefore($rightDouble)
+      $lastSingle.insertAfter($lastDouble)
+      break
+  }
+}
+
+function setContactLayout() {
+  switch (globalScreenSize) {
+    case 'mobile':
+      $contactCard.removeClass('horizontal')
+      $contactImg.attr('src', contactImgSrcBase + 'landscape.jpg')
+      break
+    case 'tablet':
+      $contactCard.addClass('horizontal')
+      $contactImg.attr('src', contactImgSrcBase + 'portrait.jpg')
+      break
+    case 'desktop':
+    case 'largeDesktop':
+      $contactCard.addClass('horizontal')
+      $contactImg.attr('src', contactImgSrcBase + 'square.jpg')
+      break
+  }
 }
