@@ -1,4 +1,17 @@
 /* ============================== */
+/* ========= Typography ========= */
+/* ============================== */
+
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url('../fonts/Quicksand/static/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+}
+
+/* ============================== */
 /* ============ Main ============ */
 /* ============================== */
 
@@ -124,15 +137,19 @@ nav ul a:hover {
   right: 25px;
   background-color: #039be5;
 }
-.tap-target {
+#menu img.icon,
+.tap-target-wave .btn-floating img.icon {
+  position: absolute;
+  margin-left: 1px;
+  height: 30px;
+}
+.tap-target,
+.tap-target-wave .btn-floating {
   background-color: #039be5;
   color: #FFFFFF;
 }
 .tap-target-content {
   text-align: right;
-}
-.tap-target-wave .btn-floating {
-  background-color: #039be5;
 }
 
 /* ============================== */
@@ -214,9 +231,9 @@ nav ul a:hover {
   bottom: 50px;
   animation: bounce .5s cubic-bezier(.5, .05, 1, .5) infinite alternate;
 }
-.icon-wrapper i {
+.icon-wrapper img {
   color: #ffffff;
-  font-size: 60px;
+  height: 64px;
 }
 
 /* ============================== */
@@ -551,8 +568,8 @@ body.mobile #writings {
   color: #3f51b5;
   transition: all .25s ease;
 }
-#writings .card .card-reveal i {
-  margin-top: 4px;
+#writings .card .card-reveal img {
+  margin-top: -2px;
   opacity: 0.75;
   transition: all .25s ease;
 }
@@ -584,9 +601,10 @@ body.mobile #writings {
 #writings .article-stats span {
   margin-left: 6px;
 }
-#writings .article-stats i {
+#writings .article-stats img {
   position: relative;
-  top: 2px;
+  top: 3px;
+  opacity: .6;
 }
 
 /* ============================== */
