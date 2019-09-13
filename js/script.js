@@ -72,6 +72,8 @@ function initMaterialize() {
   }
   
   M.ScrollSpy.init(elems, options)
+
+  $('.tap-target').tapTarget()
 }
 
 function initParticles() {

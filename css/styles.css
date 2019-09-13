@@ -115,6 +115,27 @@ nav ul a:hover {
 }
 
 /* ============================== */
+/* ===== Feature Discovery ====== */
+/* ============================== */
+
+#menu {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #039be5;
+}
+.tap-target {
+  background-color: #039be5;
+  color: #FFFFFF;
+}
+.tap-target-content {
+  text-align: right;
+}
+.tap-target-wave .btn-floating {
+  background-color: #039be5;
+}
+
+/* ============================== */
 /* =========== Intro ============ */
 /* ============================== */
 
@@ -385,7 +406,6 @@ body.mobile #skills {
   position: relative;
   margin-bottom: 15px;
   max-height: 200px;
-  /* height: 187.844px; */
 }
 .tile img {
   width: 100%;
