@@ -241,6 +241,40 @@ function initEventHandler() {
     }
   })
 
+  // $('#writings .activator').on('click', function(e) {
+  //   e.preventDefault()
+  //   let $card = $(this).closest('.card')
+  //   // $card.addClass('open')
+  // })
+
+  // $('#writings a.card-reveal-close').on('click', function(e) {
+  //   let $card = $(this).closest('.card')
+  //   let $cardReveal = $(this).parent()
+
+  //   // $card.css('overflow', 'visible')
+  //   // $cardReveal.css('display', 'none')
+
+  //   // $cardReveal.css({
+  //   //   display: 'none',
+  //   //   transform: 'translateY(0%)'
+  //   // })
+
+  //   // $card.removeClass('open')
+
+  //   // $cardReveal.css('transition', 'all .25s ease')
+  //   // $cardReveal.css('display', 'none')
+  //   // $cardReveal.css('transform', 'translateY(0%)')
+
+    
+
+  //   // $cardReveal.animate({
+  //   //   display: 'none',
+  //   //   transform: 'translateY(0%)'
+  //   // }, 1000, function() {
+  //   //   // Animation complete.
+  //   // })
+  // })
+
   $(window).resize(function() {
     let timeout = false // holder for timeout ID
     let delay = 500 // delay after event is "complete" to run callback
