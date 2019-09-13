@@ -140,7 +140,6 @@ nav ul a:hover {
 #menu img.icon,
 .tap-target-wave .btn-floating img.icon {
   position: absolute;
-  margin-left: 1px;
   height: 30px;
 }
 .tap-target,
@@ -150,6 +149,11 @@ nav ul a:hover {
 }
 .tap-target-content {
   text-align: right;
+}
+.tap-target-wrapper.open .tap-target-wave::after {
+  visibility: visible;
+  -webkit-animation: none;
+  animation: none;
 }
 
 /* ============================== */
