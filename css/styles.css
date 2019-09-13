@@ -385,6 +385,7 @@ body.mobile #skills {
   position: relative;
   margin-bottom: 15px;
   max-height: 200px;
+  /* height: 187.844px; */
 }
 .tile img {
   width: 100%;

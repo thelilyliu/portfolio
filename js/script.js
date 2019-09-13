@@ -3,9 +3,8 @@ $(document).ready(function() {
   initMaterialize()
   initParticles()
   initTypeIt()
-  initWaypoints()
-  initMasonry()
   initStyles()
+  initMasonry()
   initEventHandler()
 })
 
@@ -177,42 +176,34 @@ function initTypeIt() {
   })
 }
 
-function initWaypoints() {
-  /* let waypoint1 = new Waypoint({
-    element: $('.waypoint.first'),
-    handler: function(direction) {
-      if (direction === 'down') {
-        M.toast({ html: '<i class="material-icons">chevron_left</i> Scroll me!' })
-      } else {
-        M.Toast.dismissAll()
-      }
-    },
-    offset: '40%'
-  }) */
+/* ============================== */
+// Skills
+/* ============================== */
 
-  /* let waypoint2 = new Waypoint({
-    element: $('.waypoint.last'),
-    handler: function(direction) {
-      if (direction === 'down') {
-        M.toast({ html: '<i class="material-icons">chevron_left</i> Scroll me!' })
-      } else {
-        M.Toast.dismissAll()
-      }
-    },
-    offset: '40%'
-  }) */
-}
+const skillsImgRatio = 326 / 353
+const mobileNumColumns = 2
+const mobilePaddingValue = 10.5
+const tabletNumColumns = 3
+const tabletPaddingValue = 10.875
+const desktopNumColumns = 4
+const desktopPaddingValue = 11.25
 
-function initMasonry() {
-  // init Masonry after all images have loaded
-  let $grid = $('.grid').imagesLoaded(function() {
-    $grid.masonry({
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true
-    })
-  })
-}
+let $skillsRow = $('#skills .row')
+let $tileImages = $('.tile img')
+let $firstDouble = $('.tile.double:eq(0)').parent()
+let $firstSingle = $('.tile.single:eq(0)').parent()
+let $rightDouble = $('.tile.double:eq(2)').parent()
+let $rightSingle = $('.tile.single:eq(5)').parent()
+let $lastDouble = $('.tile.double:eq(3)').parent()
+let $lastSingle = $('.tile.single:eq(7)').parent()
+
+/* ============================== */
+// Contact
+/* ============================== */
+
+const contactImgSrcBase = 'images/contact/profile-'
+let $contactCard = $('#contact .card')
+let $contactImg = $('#contact .card-image img')
 
 function initStyles() {
   let windowWidth = $(window).width()
@@ -221,29 +212,26 @@ function initStyles() {
   // Skills
   /* ============================== */
 
-  let height = $('.tile.single img').height()
-  $('.tile.double img').css('height', height)
-
-  let $firstDouble = $('.tile.double:eq(0)').parent()
-  let $firstSingle = $('.tile.single:eq(0)').parent()
-  
-  let $rightDouble = $('.tile.double:eq(2)').parent()
-  let $rightSingle = $('.tile.single:eq(5)').parent()
-
-  let $lastDouble = $('.tile.double:eq(3)').parent()
-  let $lastSingle = $('.tile.single:eq(7)').parent()
-
   if (windowWidth <= 992) { // mobile
+    let height = ($skillsRow.width() / mobileNumColumns - mobilePaddingValue * 2) * skillsImgRatio
+    $tileImages.css('height', height)
+
     $lastSingle.css('display', 'block');
     $firstDouble.insertBefore($firstSingle)
     $rightSingle.insertBefore($rightDouble)
     $lastDouble.insertAfter($lastSingle)
   } else if (windowWidth <= 1200) { // tablet
+    let height = ($skillsRow.width() / tabletNumColumns - tabletPaddingValue * 2) * skillsImgRatio
+    $tileImages.css('height', height)
+
     $lastSingle.css('display', 'none')
     $firstDouble.insertBefore($firstSingle)
     $rightDouble.insertBefore($rightSingle)
     $lastSingle.insertAfter($lastDouble)
   } else if (windowWidth > 1200) { // desktop
+    let height = ($skillsRow.width() / desktopNumColumns - desktopPaddingValue * 2) * skillsImgRatio
+    $tileImages.css('height', height)
+
     $lastSingle.css('display', 'block')
     $firstSingle.insertBefore($firstDouble)
     $rightSingle.insertBefore($rightDouble)
@@ -253,10 +241,6 @@ function initStyles() {
   /* ============================== */
   // Contact
   /* ============================== */
-
-  let $contactCard = $('#contact .card')
-  let $contactImg = $('#contact .card-image img')
-  const contactImgSrcBase = 'images/contact/profile-'
 
   if (windowWidth <= 600) { // mobile
     $contactCard.removeClass('horizontal')
@@ -268,6 +252,17 @@ function initStyles() {
     $contactCard.addClass('horizontal')
     $contactImg.attr('src', contactImgSrcBase + 'square.jpg')
   }
+}
+
+function initMasonry() {
+  // init Masonry after all images have loaded
+  let $grid = $('.grid').imagesLoaded(function() {
+    $grid.masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    })
+  })
 }
 
 function initEventHandler() {
@@ -289,7 +284,7 @@ function initEventHandler() {
 
   $(window).resize(function() {
     let timeout = false // holder for timeout ID
-    let delay = 250 // delay after event is "complete" to run callback
+    let delay = 500 // delay after event is "complete" to run callback
 
     clearTimeout(timeout)
     timeout = setTimeout(initStyles, delay)
