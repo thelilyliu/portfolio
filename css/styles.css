@@ -5,10 +5,22 @@
 @font-face {
   font-family: 'Quicksand';
   src: local('Quicksand'), url('../fonts/Quicksand/static/Quicksand-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand'), url('../fonts/Quicksand/static/Quicksand-SemiBold.ttf') format('truetype');
+  font-weight: bold;
 }
 @font-face {
   font-family: 'Nunito';
   src: local('Nunito'), url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url('../fonts/Nunito/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: bold;
 }
 
 /* ============================== */
@@ -22,6 +34,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
+  letter-spacing: 1px;
 }
 p {
   font-size: 18px;
@@ -335,9 +348,6 @@ body.mobile #experience {
 .featured .card-content.last {
   border-radius: 0 0 5px 5px;
 }
-.featured .card-content.last .title {
-  font-weight: 700;
-}
 
 /* ============================== */
 
@@ -358,11 +368,20 @@ body.mobile #experience {
   font-size: 26px;
 }
 .featured .card p {
-  font-size: 20px;
   letter-spacing: 0.5px;
 }
-.featured .card p.date {
+.featured .card p.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 125%;
+}
+.featured .card p.date,
+.featured .card p.location {
   font-size: 18px;
+}
+.featured .card .hide-on-extra-small-only {
+  display: none;
 }
 .featured .card hr {
   width: 75px;
@@ -396,6 +415,12 @@ body.mobile #experience {
 
 /* ============================== */
 
+@media (min-width: 401px) {
+  .featured .card .hide-on-extra-small-only {
+    display: inline-block;
+  }
+}
+
 @media (min-width: 601px) {
   .featured .card {
     margin-bottom: 20px;
@@ -403,8 +428,12 @@ body.mobile #experience {
   .featured .card h4 {
     font-size: 28px;
   }
-  .featured .card p {
-    font-size: 22px;
+  .featured .card p.title {
+    font-size: 24px;
+  }
+  .featured .card p.date,
+  .featured .card p.location {
+    font-size: 20px;
   }
   .featured .card li {
     font-size: 18px;
@@ -779,8 +808,6 @@ body.mobile #contact .container {
   text-align: right;
 }
 #contact .card .card-action a {
-  letter-spacing: 1px;
-  font-size: 16px;
   margin-left: 8px;
   margin-right: 0;
 }
