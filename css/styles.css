@@ -51,6 +51,12 @@ section .section-title {
 
 /* ============================== */
 
+body.mobile section .container {
+  padding: 75px 0;
+}
+
+/* ============================== */
+
 @media (min-width: 601px) {
   section .section-title {
     font-size: 50px;
@@ -178,6 +184,13 @@ nav ul a:hover {
 }
 #typeit-roles {
   color: #49FFEC;
+}
+
+/* ============================== */
+
+body.short-height #intro .container.center .row {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 /* ============================== */

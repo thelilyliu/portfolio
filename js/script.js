@@ -12,7 +12,8 @@ $(document).ready(function() {
 // Global
 /* ============================== */
 
-let globalScreenSize = ''
+let globalScreenWidth = ''
+let $body = $('body')
 
 /* ============================== */
 // Skills
@@ -57,8 +58,8 @@ function initMobile() {
   let isIos = isIphone || isIpod || isIpad
 
   if (isMobile) {
-    if (isIos) $('body').addClass('ios')
-    $('body').addClass('mobile')
+    if (isIos) $body.addClass('ios')
+    $body.addClass('mobile')
   }
 }
 
@@ -252,48 +253,55 @@ function initEventHandler() {
 
 function setScreenSize() {
   let windowWidth = $(window).width()
-  let screenSize = ''
+  let windowHeight = $(window).height()
+  let screenWidth = ''
 
   if (windowWidth <= 600) { // mobile
-    screenSize = 'mobile'
+    screenWidth = 'mobile'
   } else if (windowWidth <= 992) { // tablet
-    screenSize = 'tablet'
+    screenWidth = 'tablet'
   } else if (windowWidth <= 1200) { // desktop
-    screenSize = 'desktop'
+    screenWidth = 'desktop'
   } else if (windowWidth > 1200) { // largeDesktop
-    screenSize = 'largeDesktop'
+    screenWidth = 'largeDesktop'
   }
 
-  if (screenSize != globalScreenSize) {
-    globalScreenSize = screenSize
+  if (screenWidth != globalScreenWidth) {
+    globalScreenWidth = screenWidth
     setSkillsLayout()
     setContactLayout()
+  }
+
+  if (windowHeight <= 600) { // short
+    $body.addClass('short-height')
+  } else { // not short
+    $body.removeClass('short-height')
   }
 
   setSkillsStyles()
 }
 
 function setSkillsStyles() {
-  let height = 0
+  let tileHeight = 0
 
-  switch (globalScreenSize) {
+  switch (globalScreenWidth) {
     case 'mobile':
     case 'tablet':
-      height = ($skillsRow.width() / mobileTabletNumColumns - mobileTabletPaddingValue * 2) * skillsImgRatio
+      tileHeight = ($skillsRow.width() / mobileTabletNumColumns - mobileTabletPaddingValue * 2) * skillsImgRatio
       break
     case 'desktop':
-      height = ($skillsRow.width() / desktopNumColumns - desktopPaddingValue * 2) * skillsImgRatio
+      tileHeight = ($skillsRow.width() / desktopNumColumns - desktopPaddingValue * 2) * skillsImgRatio
       break
     case 'largeDesktop':
-      height = ($skillsRow.width() / largeDesktopNumColumns - largeDesktopPaddingValue * 2) * skillsImgRatio
+      tileHeight = ($skillsRow.width() / largeDesktopNumColumns - largeDesktopPaddingValue * 2) * skillsImgRatio
       break
   }
 
-  $tileImages.css('height', height)
+  $tileImages.css('height', tileHeight)
 }
 
 function setSkillsLayout() {
-  switch (globalScreenSize) {
+  switch (globalScreenWidth) {
     case 'mobile':
     case 'tablet':
       $lastSingle.css('display', 'block')
@@ -317,7 +325,7 @@ function setSkillsLayout() {
 }
 
 function setContactLayout() {
-  switch (globalScreenSize) {
+  switch (globalScreenWidth) {
     case 'mobile':
       $contactCard.removeClass('horizontal')
       $contactImg.attr('src', contactImgSrcBase + 'landscape.jpg')
