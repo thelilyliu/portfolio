@@ -1,3 +1,12 @@
+window.onload = function() {
+  setTimeout(function() {
+    $('.loader-wrap').addClass('loaded')
+    setTimeout(function() {
+      $('.loader-wrap').css('display', 'none')
+    }, 1000)
+  }, 1000)
+}
+
 $(document).ready(function() {
   initMobile()
   initMaterialize()
@@ -202,8 +211,7 @@ function initTypeIt() {
       'Software Developer',
       'Project Manager',
       'Public Speaker',
-      'Hackathon Lover',
-      // 'Machine Learning Developer',
+      'Hackathon Lover'
     ],
     speed: 100,
     startDelay: 1000,
