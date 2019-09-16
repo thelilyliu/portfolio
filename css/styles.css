@@ -395,13 +395,6 @@ nav ul a:hover {
 
 /* ============================== */
 
-body.short-height #intro .container.center .row {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-/* ============================== */
-
 .image-wrapper {
   text-align: center;
 }
@@ -462,6 +455,12 @@ body.short-height #intro .container.center .row {
 
 /* ============================== */
 
+body.short-height #intro .container.center .row {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+body.short-height #intro p.education,
+body.short-height #intro .icon-wrapper,
 body.mobile .text-wrapper p.education,
 body.mobile .icon-wrapper {
   display: none;
@@ -500,6 +499,9 @@ body.mobile .icon-wrapper {
   }
   .text-wrapper p {
     font-size: 20px;
+  }
+  body.short-height #intro p.education {
+    display: block;
   }
 }
 
