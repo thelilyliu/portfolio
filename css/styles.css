@@ -503,10 +503,6 @@ body.mobile #skills {
   margin-top: 20px;
   transition: all .25s ease;
   width: 100%;
-  padding: 0 40px;
-}
-.tile .text-wrapper.overflowed {
-  padding: 0;
 }
 .tile .text-wrapper hr {
   width: 0;
@@ -524,6 +520,9 @@ body.mobile #skills {
 .tile .text-wrapper p {
   margin: 0;
   line-height: 120%;
+}
+.tile .text-wrapper h4 {
+  padding: 0 40px;
 }
 
 /* ============================== */
@@ -547,6 +546,24 @@ body.mobile #skills {
 
 /* ============================== */
 
+@media (max-width: 400px) {
+  .tile .text-wrapper h4.overflowed.extra-small {
+    padding: 0;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .tile .text-wrapper h4.overflowed.small {
+    padding: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .tile .text-wrapper h4.overflowed.medium {
+    padding: 0;
+  }
+}
+
 @media (min-width: 797px) and (max-width: 992px) {
   .tile {
     max-height: 150px;
@@ -562,7 +579,16 @@ body.mobile #skills {
   }
   .tile img.primary {
     max-height: 175px;
-  }  
+  }
+  .tile .text-wrapper h4.overflowed.large {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1201px) {
+  .tile .text-wrapper h4.overflowed.extra-large {
+    padding: 0;
+  }
 }
 
 /* ============================== */
