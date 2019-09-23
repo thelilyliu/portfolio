@@ -71,6 +71,7 @@ function initMobile() {
     
     if (isIos) {
       $body.addClass('ios')
+      alert('ios')
       let height = $(window).height()
       $('section#intro').css('height', height)
     }
