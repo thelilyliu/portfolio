@@ -461,8 +461,8 @@ body.short-height #intro .container.center .row {
 }
 body.short-height #intro p.education,
 body.short-height #intro .icon-wrapper,
-body.mobile .text-wrapper p.education,
-body.mobile .icon-wrapper {
+body.mobile #intro .text-wrapper p.education,
+body.mobile #intro .icon-wrapper {
   display: none;
 }
 

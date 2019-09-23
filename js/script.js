@@ -67,8 +67,13 @@ function initMobile() {
   let isIos = isIphone || isIpod || isIpad
 
   if (isMobile) {
-    if (isIos) $body.addClass('ios')
     $body.addClass('mobile')
+    
+    if (isIos) {
+      $body.addClass('ios')
+      let height = $(window).height()
+      $('section#intro').css('height', height)
+    }
   }
 }
 
