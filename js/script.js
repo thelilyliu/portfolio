@@ -71,7 +71,9 @@ function initMobile() {
     
     if (isIos) {
       $body.addClass('ios')
-      alert('hi')
+      alert('bye')
+      let height = $(window).height()
+      $('section#intro').css('height', height)
     }
   }
 }
