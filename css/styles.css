@@ -455,6 +455,9 @@ nav ul a:hover {
 
 /* ============================== */
 
+body.ios #intro .container.center {
+  position: absolute;
+}
 body.short-height #intro .container.center .row {
   margin-top: 20px;
   margin-bottom: 0;
