@@ -213,14 +213,15 @@ function initParticles() {
 function initTypeIt() {
   new TypeIt('#typeit-roles', {
     strings: [
-      'Software Developer',
-      'Project Manager',
-      'Public Speaker',
-      'Hackathon Lover'
+      'Software Engineer',
+      'Program Manager',
+      'Keynote Speaker',
+      'Hackathon Lover',
+      'Avid Writer'
     ],
     speed: 100,
     startDelay: 1000,
-    nextStringDelay: 2500,
+    nextStringDelay: 3000,
     loop: true,
     breakLines: false,
     autoStart: false
