@@ -217,11 +217,11 @@ function initTypeIt() {
       'Program Manager',
       'Keynote Speaker',
       'Hackathon Lover',
-      'Avid Writer'
+      'Aspiring Writer'
     ],
     speed: 100,
-    startDelay: 1000,
-    nextStringDelay: 3000,
+    startDelay: 2000,
+    nextStringDelay: 4000,
     loop: true,
     breakLines: false,
     autoStart: false
