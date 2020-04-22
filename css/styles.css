@@ -455,7 +455,7 @@ nav ul a:hover {
 
 /* ============================== */
 
-body.ios #intro .container.center {
+body.mobile #intro .container.center {
   position: absolute;
 }
 body.short-height #intro .container.center .row {
@@ -525,6 +525,9 @@ body.mobile #intro .icon-wrapper {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body.mac #experience {
+  background-attachment: scroll;
 }
 body.mobile #experience {
   background-color: #1987af;
@@ -656,6 +659,9 @@ body.mobile #experience {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body.mac #skills {
+  background-attachment: scroll;
 }
 body.mobile #skills {
   background-color: #96a5c8;
@@ -800,6 +806,9 @@ body.mobile #skills {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body.mac #writings {
+  background-attachment: scroll;
 }
 body.mobile #writings {
   background-color: #506496;
@@ -954,6 +963,9 @@ body.mobile #writings {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body.mac #contact {
+  background-attachment: scroll;
 }
 body.mobile #contact {
   background-color: #7dafaa;
