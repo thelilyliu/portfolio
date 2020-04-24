@@ -530,8 +530,10 @@ body.mac #experience {
   background-attachment: scroll;
 }
 body.mobile #experience {
-  background-color: #1987af;
-  background-image: none;
+  background-image: linear-gradient(to bottom, #42A5F5 0%, #BBDEFB 100%);
+  background-position: initial;
+  background-size: auto;
+  background-attachment: scroll;
 }
 
 /* ============================== */
@@ -664,8 +666,10 @@ body.mac #skills {
   background-attachment: scroll;
 }
 body.mobile #skills {
-  background-color: #96a5c8;
-  background-image: none;
+  background-image: linear-gradient(to bottom, #D1C4E9 0%, #96a5c8 100%);
+  background-position: initial;
+  background-size: auto;
+  background-attachment: scroll;
 }
 
 /* ============================== */
@@ -811,8 +815,10 @@ body.mac #writings {
   background-attachment: scroll;
 }
 body.mobile #writings {
-  background-color: #506496;
-  background-image: none;
+  background-image: linear-gradient(to bottom, #5C6BC0 0%, #9FA8DA 100%);
+  background-position: initial;
+  background-size: auto;
+  background-attachment: scroll;
 }
 
 /* ============================== */
@@ -958,7 +964,6 @@ body.mobile #writings {
 /* ============================== */
 
 #contact {
-  height: 100%;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)), url('../images/contact/background.jpg');
   background-position: center center;
   background-size: cover;
@@ -968,8 +973,10 @@ body.mac #contact {
   background-attachment: scroll;
 }
 body.mobile #contact {
-  background-color: #7dafaa;
-  background-image: none;
+  background-image: linear-gradient(to bottom, #80CBC4 0%, #B2DFDB 100%);
+  background-position: initial;
+  background-size: auto;
+  background-attachment: scroll;
 }
 body.mobile #contact .container {
   padding-bottom: 50px;
@@ -1092,3 +1099,4 @@ body.mobile #contact .container {
   border-bottom: dotted 1px #D14836;
   transition: all .25s ease;
 }
+

@@ -1,700 +1,664 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="images/intro/thumbnail.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thelilyliu.com/" />
-    <meta property="og:title" content="Lily Liu" />
-    <meta property="og:description" content="Lily Liu is a software developer with experience in machine learning, API development, full-stack web development, project management, and building award-winning customer-centric solutions." />
 
-    <link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="images/intro/icon.png" rel="icon" />
-    
-    <title>Lily Liu</title>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:image" content="images/intro/thumbnail.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thelilyliu.com/" />
+  <meta property="og:title" content="Lily Liu" />
+  <meta property="og:description"
+    content="Lily Liu is a software developer with experience in machine learning, API development, full-stack web development, project management, and building award-winning customer-centric solutions." />
 
-  <body>
+  <link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="images/intro/icon.png" rel="icon" />
 
-    <!-- Loading Spinner -->
+  <title>Lily Liu</title>
+</head>
 
-    <div class="loader-wrap">
-      <div class="loader-circles">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
+<body>
+
+  <!-- Loading Spinner -->
+
+  <div class="loader-wrap">
+    <div class="loader-circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+
+  <nav>
+    <div class="nav-wrapper">
+      <a class="logo-icon scroll" scroll-target="#intro">
+        <img src="images/intro/icon.png" />
+      </a>
+      <a class="brand-logo logo-title scroll" scroll-target="#intro">
+        <h5>Lily Liu</h5>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="scroll" scroll-target="#intro">Intro</a></li>
+        <li><a class="scroll" scroll-target="#experience">Experience</a></li>
+        <li><a class="scroll" scroll-target="#skills">Skills</a></li>
+        <li><a class="scroll" scroll-target="#writings">Writings</a></li>
+        <li><a class="scroll" scroll-target="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Feature Discovery -->
+
+  <aside class="hide-on-small-only">
+    <a id="menu" class="waves-effect waves-light btn btn-large btn-floating"
+      onclick="$('.tap-target').tapTarget('open')">
+      <img class="icon center" src="icons/light_2x/star_border.png" />
+    </a>
+
+    <div class="tap-target" data-target="menu">
+      <div class="tap-target-content">
+        <h5>What's New</h5>
+        <p>
+          I officially concluded my second
+          <br>
+          internship at Microsoft building a
+          <br>
+          custom data type framework for the
+          <br>
+          CDS platform. Now it's back to school...
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Intro -->
+
+  <section id="intro" class="scrollspy">
+    <div id="particles-js"></div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col s12 m6 offset-m3 l4 image-wrapper">
+          <img src="images/intro/profile.jpg" />
+        </div>
+        <div class="col s12 m10 offset-m1 l8 text-wrapper">
+          <h1>Lily Liu</h1>
+          <h4 id="typeit-roles"></h4>
+          <p class="education">
+            University of Waterloo
+            <br>
+            Bachelors of Computer Science
+            <br>
+            Sep. 2017 &#8211; Dec. 2020 | 3rd Year &#8211; 3.86 GPA
+          </p>
+          <p class="summary">A software engineer with experience in backend engineering, data modeling, full-stack web
+            development, machine learning, and building scalable, reliable, customer-centric solutions.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Navigation -->
-
-    <nav>
-      <div class="nav-wrapper">
-        <a class="logo-icon scroll" scroll-target="#intro">
-          <img src="images/intro/icon.png" />
-        </a>
-        <a class="brand-logo logo-title scroll" scroll-target="#intro">
-          <h5>Lily Liu</h5>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a class="scroll" scroll-target="#intro">Intro</a></li>
-          <li><a class="scroll" scroll-target="#experience">Experience</a></li>
-          <li><a class="scroll" scroll-target="#skills">Skills</a></li>
-          <li><a class="scroll" scroll-target="#writings">Writings</a></li>
-          <li><a class="scroll" scroll-target="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Feature Discovery -->
-
-    <aside class="hide-on-small-only">
-      <a id="menu" class="waves-effect waves-light btn btn-large btn-floating" onclick="$('.tap-target').tapTarget('open')">
-        <img class="icon center" src="icons/light_2x/star_border.png" />
+    <div class="icon-wrapper">
+      <a class="scroll" scroll-target="#experience">
+        <img class="icon" src="icons/light_2x/keyboard_arrow_down.png" />
       </a>
+    </div>
+  </section>
 
-      <div class="tap-target" data-target="menu">
-        <div class="tap-target-content">
-          <h5>What's New</h5>
-          <p>
-            I officially accepted my return
-            <br>
-            offer from Microsoft as a software
-            <br>
-            engineer intern for the 2020 winter
-            <br>
-            term. Excited to go back to Seattle!
-          </p>
-        </div>
-      </div>
-    </aside>
+  <!-- Experience -->
 
-    <!-- Intro -->
+  <section id="experience" class="scrollspy">
+    <div class="container">
 
-    <section id="intro" class="scrollspy">
-      <div id="particles-js"></div>
-
-      <div class="container center">
-        <div class="row">
-          <div class="col s12 m6 offset-m3 l4 image-wrapper">
-            <img src="images/intro/profile.jpg" />
-          </div>
-          <div class="col s12 m10 offset-m1 l8 text-wrapper">
-            <h1>Lily Liu</h1>
-            <h4 id="typeit-roles"></h4>
-            <p class="education">
-              University of Waterloo
-              <br>
-              Bachelors of Computer Science
-              <br>
-              Sep. 2017 &#8211; Dec. 2020 | 3rd Year &#8211; 3.86 GPA
-            </p>
-            <p class="summary">A software engineer with experience in backend engineering, data modeling, full-stack web development, machine learning, and building scalable, reliable, customer-centric solutions.</p>
-          </div>
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-title">Experience</h2>
         </div>
       </div>
 
-      <div class="icon-wrapper">
-        <a class="scroll" scroll-target="#experience">
-          <img class="icon" src="icons/light_2x/keyboard_arrow_down.png" />
-        </a>
-      </div>
-    </section>
-
-    <!-- Experience -->
-
-    <section id="experience" class="scrollspy">
-      <div class="container">
-
-        <div class="row">
-          <div class="col s12">
-            <h2 class="section-title">Experience</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col l10 offset-l1 xl8 offset-xl2 featured">
-            <div class="card">
-              <div class="card-content first grey lighten-3">
-                <h4>Microsoft <span class="hide-on-small-only">Corporation</span></h4>
-                <img src="images/experience/microsoft-logo.png">
+      <div class="row">
+        <div class="col l10 offset-l1 xl8 offset-xl2 featured">
+          <div class="card">
+            <div class="card-content first grey lighten-3">
+              <h4>Microsoft <span class="hide-on-small-only">Corporation</span></h4>
+              <img src="images/experience/microsoft-logo.png">
+            </div>
+            <div class="card-content last">
+              <p class="title">Software Engineering Intern</p>
+              <p class="date">Jan. 2020 &#8211; Apr. 2020 <span class="hide-on-extra-small-only">(4 months)</span></p>
+              <p class="location">Redmond, Washington</p>
+              <hr>
+              <ul>
+                <li>Developed and shipped a <strong>scalable and extensible framework</strong> that allows millions of monthly active users to define and interact with new <strong>custom data types</strong> in the Common Data Service platform, reducing development time for a data type from <strong>months to minutes</strong></li>
+                <li>Built <strong>enterprise-grade core infrastructure</strong>, with special focus on data storage, retrieval, and reliability</li>
+                <li>Defined <strong>models, contracts, and schemas</strong> to support existing types, new data types, and various complex scenarios</li>
+              </ul>
+              <div class="badge-wrapper">
+                <span class="new badge blue" data-badge-caption="Azure"></span>
+                <span class="new badge blue" data-badge-caption=".NET Framework"></span>
+                <span class="new badge cyan" data-badge-caption="SQL"></span>
+                <span class="new badge cyan" data-badge-caption="C#"></span>
+                <span class="new badge light-blue" data-badge-caption="Data Modeling"></span>
+                <span class="new badge light-blue" data-badge-caption="Backend Development"></span>
               </div>
-              <div class="card-content last">
-                <p class="title">Software Engineer Intern</p>
-                <p class="date">Jan. 2020 &#8211; Present <span class="hide-on-extra-small-only"></span></p>
-                <p class="location">Redmond, Washington</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col l10 offset-l1 xl8 offset-xl2 featured">
+          <div class="card">
+            <div class="card-content first grey lighten-3">
+              <h4>Microsoft <span class="hide-on-small-only">Corporation</span></h4>
+              <img src="images/experience/microsoft-logo.png">
+            </div>
+            <div class="card-content last">
+              <p class="title">Explore Intern</p>
+              <p class="date">May 2019 &#8211; Aug. 2019 <span class="hide-on-extra-small-only">(4 months)</span></p>
+              <p class="location">Redmond, Washington</p>
+              <hr>
+              <ul>
+                <li>Built a <strong>robust data pipeline</strong> at enterprise scale to reliably process hundreds of
+                  millions of telemetry logs</li>
+                <li>Extensive experience writing <strong>efficient functions</strong> to query large, complex data sets
+                  while ensuring data integrity and fine-tuning queries to optimize performance</li>
+                <li>Strong ability to <strong>troubleshoot data inconsistencies</strong> and identify and resolve the
+                  root cause of the problem</li>
+                <li>Designed, developed, and deployed <strong>RESTful APIs</strong> built with .NET Core in a continuous
+                  integration environment</li>
+              </ul>
+              <div class="badge-wrapper">
+                <span class="new badge blue" data-badge-caption="Azure"></span>
+                <span class="new badge blue" data-badge-caption=".NET Core"></span>
+                <span class="new badge cyan" data-badge-caption="Kusto"></span>
+                <span class="new badge cyan" data-badge-caption="SQL"></span>
+                <span class="new badge cyan" data-badge-caption="C#"></span>
+                <span class="new badge light-blue" data-badge-caption="Project Management"></span>
+                <span class="new badge light-blue" data-badge-caption="API Development"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col l10 offset-l1 xl8 offset-xl2 featured">
+          <div class="card">
+            <div class="card-content first grey lighten-3">
+              <h4>WATonomous</h4>
+              <img src="images/experience/wato-logo.png">
+            </div>
+            <div class="card-content last">
+              <p class="title">Machine Learning Developer</p>
+              <p class="date">Sep. 2018 &#8211; Apr. 2019 <span class="hide-on-extra-small-only">(8 months)</span></p>
+              <p class="location">Waterloo, Ontario</p>
+              <hr>
+              <ul>
+                <li>Trained <strong>convolutional neural networks</strong> for real-time, multi-class object detection
+                  for self-driving cars using YOLOv3</li>
+                <li>Conducted <strong>statistical analysis</strong> using Python and NumPy to fine-tune models and
+                  accurately match objects</li>
+                <li>Researched and employed new techniques like <strong>artificial data synthesis</strong> to generate
+                  huge quantities of high-quality data to supplement sparse or missing data</li>
+              </ul>
+              <div class="badge-wrapper">
+                <span class="new badge blue" data-badge-caption="Ubuntu"></span>
+                <span class="new badge cyan" data-badge-caption="Keras"></span>
+                <span class="new badge cyan" data-badge-caption="OpenCV"></span>
+                <span class="new badge cyan" data-badge-caption="NumPy"></span>
+                <span class="new badge cyan" data-badge-caption="Python"></span>
+                <span class="new badge light-blue" data-badge-caption="Computer Vision"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col l10 offset-l1 xl8 offset-xl2 featured">
+          <div class="card">
+            <div class="card-content first grey lighten-3">
+              <h4>TD Bank Group</h4>
+              <img src="images/experience/td-logo.jpg">
+            </div>
+            <div class="card-content last">
+              <p class="title">Full-Stack Developer</p>
+              <p class="date">May 2018 &#8211; Aug. 2018 <span class="hide-on-extra-small-only">(4 months)</span></p>
+              <p class="location">Toronto, Ontario</p>
+              <hr>
+              <ul>
+                <li>Built applications with <strong>machine learning</strong> functionality by collecting and sanitizing
+                  data, training neural networks, and continuously iterating to improve accuracy</li>
+                <li>Developed a <strong>community-based platform</strong> using Vue.js that fosters collaboration to
+                  develop innovative solutions</li>
+                <li>Facilitated the <strong>company-wide deployment</strong> of the web platform and hosted workshops to
+                  share my learnings</li>
+              </ul>
+              <div class="badge-wrapper">
+                <span class="new badge blue" data-badge-caption="MySQL"></span>
+                <span class="new badge blue" data-badge-caption="Ubuntu"></span>
+                <span class="new badge cyan" data-badge-caption="React Native"></span>
+                <span class="new badge cyan" data-badge-caption="Vue.js"></span>
+                <span class="new badge cyan" data-badge-caption="Node.js"></span>
+                <span class="new badge cyan" data-badge-caption="Python"></span>
+                <span class="new badge light-blue" data-badge-caption="Machine Learning"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills" class="scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-title">Skills</h2>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col s6 m5 offset-m1 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic01.jpg" />
+            <div class="text-wrapper">
+              <h4>C#</h4>
+              <div class="hidden">
                 <hr>
-                <ul>
-                  <li>Developed a scalable framework that allows millions of monthly active users to define and interact with new <strong>custom data types</strong> in the Common Data Service platform</li>
-                  <li>Built enterprise-grade <strong>core infrastructure</strong> with special focus on data storage, retrieval, reliability, and caches</li>
-                  <li>Defined <strong>models, contracts, and schemas</strong> to support existing types, new data types, and complex scenarios</li>
-                </ul>
-                <div class="badge-wrapper">
-                  <span class="new badge blue" data-badge-caption="Azure"></span>
-                  <span class="new badge blue" data-badge-caption=".NET Framework"></span>
-                  <span class="new badge cyan" data-badge-caption="SQL"></span>
-                  <span class="new badge cyan" data-badge-caption="C#"></span>
-                  <span class="new badge light-blue" data-badge-caption="Data Modeling"></span>
-                  <span class="new badge light-blue" data-badge-caption="Backend Development"></span>
-                </div>
+                <p>Proficient</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col l10 offset-l1 xl8 offset-xl2 featured">
-            <div class="card">
-              <div class="card-content first grey lighten-3">
-                <h4>Microsoft <span class="hide-on-small-only">Corporation</span></h4>
-                <img src="images/experience/microsoft-logo.png">
-              </div>
-              <div class="card-content last">
-                <p class="title">Explore Intern</p>
-                <p class="date">May 2019 &#8211; Aug. 2019 <span class="hide-on-extra-small-only">(4 months)</span></p>
-                <p class="location">Redmond, Washington</p>
-                <hr>
-                <ul>
-                  <li>Built a <strong>robust data pipeline</strong> at enterprise scale to reliably process hundreds of millions of telemetry logs</li>
-                  <li>Extensive experience writing <strong>efficient functions</strong> to query large, complex data sets while ensuring data integrity and fine-tuning queries to optimize performance</li>
-                  <li>Strong ability to <strong>troubleshoot data inconsistencies</strong> and identify and resolve the root cause of the problem</li>
-                  <li>Designed, developed, and deployed <strong>RESTful APIs</strong> built with .NET Core in a continuous integration environment</li>
-                </ul>
-                <div class="badge-wrapper">
-                  <span class="new badge blue" data-badge-caption="Azure"></span>
-                  <span class="new badge blue" data-badge-caption=".NET Core"></span>
-                  <span class="new badge cyan" data-badge-caption="Kusto"></span>
-                  <span class="new badge cyan" data-badge-caption="SQL"></span>
-                  <span class="new badge cyan" data-badge-caption="C#"></span>
-                  <span class="new badge light-blue" data-badge-caption="Project Management"></span>
-                  <span class="new badge light-blue" data-badge-caption="API Development"></span>
+        <div class="col s12 m10 offset-m1 l8 xl6">
+          <div class="tile double middle">
+            <a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/ZWC3XYGCFFRW">
+              <img class="icon" src="icons/light_2x/open_in_new.png" />
+              <img class="primary" src="images/skills/pic02.jpg" />
+              <div class="text-wrapper">
+                <h4>Deep Learning Specialization</h4>
+                <div class="hidden">
+                  <hr>
+                  <p>deeplearning.ai (Jan. 2019)</p>
                 </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col s6 m5 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic03.jpg" />
+            <div class="text-wrapper">
+              <h4>SQL</h4>
+              <div class="hidden">
+                <hr>
+                <p>Proficient</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col l10 offset-l1 xl8 offset-xl2 featured">
-            <div class="card">
-              <div class="card-content first grey lighten-3">
-                <h4>WATonomous</h4>
-                <img src="images/experience/wato-logo.png">
-              </div>
-              <div class="card-content last">
-                <p class="title">Machine Learning Developer</p>
-                <p class="date">Sep. 2018 &#8211; Apr. 2019 <span class="hide-on-extra-small-only">(8 months)</span></p>
-                <p class="location">Waterloo, Ontario</p>
-                <hr>
-                <ul>
-                  <li>Trained <strong>convolutional neural networks</strong> for real-time, multi-class object detection for self-driving cars using YOLOv3</li>
-                  <li>Conducted <strong>statistical analysis</strong> using Python and NumPy to fine-tune models and accurately match objects</li>
-                  <li>Researched and employed new techniques like <strong>artificial data synthesis</strong> to generate huge quantities of high-quality data to supplement sparse or missing data</li>
-                </ul>
-                <div class="badge-wrapper">
-                  <span class="new badge blue" data-badge-caption="Ubuntu"></span>
-                  <span class="new badge cyan" data-badge-caption="Keras"></span>
-                  <span class="new badge cyan" data-badge-caption="OpenCV"></span>
-                  <span class="new badge cyan" data-badge-caption="NumPy"></span>
-                  <span class="new badge cyan" data-badge-caption="Python"></span>
-                  <span class="new badge light-blue" data-badge-caption="Computer Vision"></span>
+        <div class="col s12 m10 offset-m1 l8 xl6">
+          <div class="tile double">
+            <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/LWB6DK7BTGP8">
+              <img class="icon" src="icons/light_2x/open_in_new.png" />
+              <img class="primary" src="images/skills/pic04.jpg" />
+              <div class="text-wrapper">
+                <h4>Machine Learning Certification</h4>
+                <div class="hidden">
+                  <hr>
+                  <p>Stanford University (Jan. 2019)</p>
                 </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col s6 m5 offset-m1 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic05.jpg" />
+            <div class="text-wrapper">
+              <h4>Go</h4>
+              <div class="hidden">
+                <hr>
+                <p>Proficient</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col l10 offset-l1 xl8 offset-xl2 featured">
-            <div class="card">
-              <div class="card-content first grey lighten-3">
-                <h4>TD Bank Group</h4>
-                <img src="images/experience/td-logo.jpg">
-              </div>
-              <div class="card-content last">
-                <p class="title">Full-Stack Developer</p>
-                <p class="date">May 2018 &#8211; Aug. 2018 <span class="hide-on-extra-small-only">(4 months)</span></p>
-                <p class="location">Toronto, Ontario</p>
+        <div class="col s6 m5 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic06.jpg" />
+            <div class="text-wrapper">
+              <h4 class="overflowed extra-small">Python</h4>
+              <div class="hidden">
                 <hr>
-                <ul>
-                  <li>Built applications with <strong>machine learning</strong> functionality by collecting and sanitizing data, training neural networks, and continuously iterating to improve accuracy</li>
-                  <li>Developed a <strong>community-based platform</strong> using Vue.js that fosters collaboration to develop innovative solutions</li>
-                  <li>Facilitated the <strong>company-wide deployment</strong> of the web platform and hosted workshops to share my learnings</li>
-                </ul>
-                <div class="badge-wrapper">
-                  <span class="new badge blue" data-badge-caption="MySQL"></span>
-                  <span class="new badge blue" data-badge-caption="Ubuntu"></span>
-                  <span class="new badge cyan" data-badge-caption="React Native"></span>
-                  <span class="new badge cyan" data-badge-caption="Vue.js"></span>
-                  <span class="new badge cyan" data-badge-caption="Node.js"></span>
-                  <span class="new badge cyan" data-badge-caption="Python"></span>
-                  <span class="new badge light-blue" data-badge-caption="Machine Learning"></span>
+                <p>Experienced</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6 m5 offset-m1 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic07.jpg" />
+            <div class="text-wrapper">
+              <h4 class="overflowed extra-small">Azure</h4>
+              <div class="hidden">
+                <hr>
+                <p>Experienced</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6 m5 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic08.jpg" />
+            <div class="text-wrapper">
+              <h4 class="overflowed extra-small small medium large extra-large">JavaScript</h4>
+              <div class="hidden">
+                <hr>
+                <p>Proficient</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m10 offset-m1 l8 xl6">
+          <div class="tile double">
+            <a target="_blank" href="https://www.linkedin.com/pulse/beyond-hackathon-td-level-up-quest-lily-liu/">
+              <img class="icon" src="icons/light_2x/open_in_new.png" />
+              <img class="primary" src="images/skills/pic09.jpg" />
+              <div class="text-wrapper">
+                <h4>TD Level Up Quest Hackathon</h4>
+                <div class="hidden">
+                  <hr>
+                  <p>1st Place (Jul. 2018)</p>
                 </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col s6 m5 offset-m1 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic10.jpg" />
+            <div class="text-wrapper">
+              <h4 class="overflowed extra-small">Vue.js</h4>
+              <div class="hidden">
+                <hr>
+                <p>Experienced</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m10 offset-m1 l8 xl6">
+          <div class="tile double middle">
+            <a target="_blank"
+              href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/">
+              <img class="icon" src="icons/light_2x/open_in_new.png" />
+              <img class="primary" src="images/skills/pic11.jpg" />
+              <div class="text-wrapper">
+                <h4>Google Cloud Sprint Hackathon</h4>
+                <div class="hidden">
+                  <hr>
+                  <p>2nd Place (Jun. 2018)</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col s6 m5 l4 xl3">
+          <div class="tile single">
+            <img class="primary" src="images/skills/pic12.jpg" />
+            <div class="text-wrapper">
+              <h4 class="overflowed extra-small">React Native</h4>
+              <div class="hidden">
+                <hr>
+                <p>Experienced</p>
               </div>
             </div>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills -->
+  <!-- Writings -->
 
-    <section id="skills" class="scrollspy">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <h2 class="section-title">Skills</h2>
-          </div>
-        </div>
+  <section id="writings" class="scrollspy">
+    <div class="container">
 
-        <div class="row">
-
-          <div class="col s6 m5 offset-m1 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic01.jpg" />
-              <div class="text-wrapper">
-                <h4>C#</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Proficient</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s12 m10 offset-m1 l8 xl6">
-            <div class="tile double middle">
-              <a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/ZWC3XYGCFFRW">
-                <img class="icon" src="icons/light_2x/open_in_new.png" />
-                <img class="primary" src="images/skills/pic02.jpg" />
-                <div class="text-wrapper">
-                  <h4>Deep Learning Specialization</h4>
-                  <div class="hidden">
-                    <hr>
-                    <p>deeplearning.ai (Jan. 2019)</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic03.jpg" />
-              <div class="text-wrapper">
-                <h4>SQL</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Proficient</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s12 m10 offset-m1 l8 xl6">
-            <div class="tile double">
-              <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/LWB6DK7BTGP8">
-                <img class="icon" src="icons/light_2x/open_in_new.png" />
-                <img class="primary" src="images/skills/pic04.jpg" />
-                <div class="text-wrapper">
-                  <h4>Machine Learning Certification</h4>
-                  <div class="hidden">
-                    <hr>
-                    <p>Stanford University (Jan. 2019)</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 offset-m1 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic05.jpg" />
-              <div class="text-wrapper">
-                <h4>Go</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Proficient</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic06.jpg" />
-              <div class="text-wrapper">
-                <h4 class="overflowed extra-small">Python</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Experienced</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 offset-m1 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic07.jpg" />
-              <div class="text-wrapper">
-                <h4 class="overflowed extra-small">Azure</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Experienced</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic08.jpg" />
-              <div class="text-wrapper">
-                <h4 class="overflowed extra-small small medium large extra-large">JavaScript</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Proficient</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s12 m10 offset-m1 l8 xl6">
-            <div class="tile double">
-              <a target="_blank" href="https://www.linkedin.com/pulse/beyond-hackathon-td-level-up-quest-lily-liu/">
-                <img class="icon" src="icons/light_2x/open_in_new.png" />
-                <img class="primary" src="images/skills/pic09.jpg" />
-                <div class="text-wrapper">
-                  <h4>TD Level Up Quest Hackathon</h4>
-                  <div class="hidden">
-                    <hr>
-                    <p>1st Place (Jul. 2018)</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 offset-m1 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic10.jpg" />
-              <div class="text-wrapper">
-                <h4 class="overflowed extra-small">Vue.js</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Experienced</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col s12 m10 offset-m1 l8 xl6">
-            <div class="tile double middle">
-              <a target="_blank" href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/">
-                <img class="icon" src="icons/light_2x/open_in_new.png" />
-                <img class="primary" src="images/skills/pic11.jpg" />
-                <div class="text-wrapper">
-                  <h4>Google Cloud Sprint Hackathon</h4>
-                  <div class="hidden">
-                    <hr>
-                    <p>2nd Place (Jun. 2018)</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col s6 m5 l4 xl3">
-            <div class="tile single">
-              <img class="primary" src="images/skills/pic12.jpg" />
-              <div class="text-wrapper">
-                <h4 class="overflowed extra-small">React Native</h4>
-                <div class="hidden">
-                  <hr>
-                  <p>Experienced</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-title">Writings</h2>
         </div>
       </div>
-    </section>
 
-    <!-- Writings -->
+      <div class="grid">
 
-    <section id="writings" class="scrollspy">
-      <div class="container">
+        <div class="grid-sizer"></div>
 
-        <div class="row">
-          <div class="col s12">
-            <h2 class="section-title">Writings</h2>
-          </div>
-        </div>
-
-        <div class="grid">
-
-          <div class="grid-sizer"></div>
-
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/microsoft-round-two-lily-liu/" target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article6.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/microsoft-round-two-lily-liu/" target="_blank">
-                  <span class="article-title">Microsoft: Round Two</span>
-                </a>
+                <span class="article-title">Microsoft: Round Two</span>
               </div>
-              <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> Oct. 23, 2019</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 200</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 20</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 2</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/microsoft-round-two-lily-liu/" target="_blank">
-                  <div class="article-title">Microsoft: Round Two</div>
-                </a>
-                <p>I always told myself that I would never do two internships at the same company because I wanted the opportunity to branch out and try different things. This summer at Microsoft changed my mind.</p>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> Oct. 23, 2019</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 201</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 20</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 2</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/all-begins-message-lily-liu/" target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article5.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/all-begins-message-lily-liu/" target="_blank">
-                  <span class="article-title">It All Begins With a Message</span>
-                </a>
+                <span class="article-title">It All Begins With a Message</span>
               </div>
-              <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> Sept. 5, 2019</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 32</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 1</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/all-begins-message-lily-liu/" target="_blank">
-                  <div class="article-title">It All Begins With a Message</div>
-                </a>
-                <p>In this article, I share details about my message-driven approach to speech writing and tips to help you craft your message and leave an impact.</p>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> Sept. 5, 2019</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 32</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 1</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/4-things-i-learned-from-weeks-pm-lily-liu/" target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article4.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/4-things-i-learned-from-weeks-pm-lily-liu/" target="_blank">
-                  <span class="article-title">4 Things I Learned from 4 Weeks of PM</span>
-                </a>
+                <span class="article-title">4 Things I Learned from 4 Weeks of PM</span>
               </div>
-              <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> June 6, 2019</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 47</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 6</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 1</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/4-things-i-learned-from-weeks-pm-lily-liu/" target="_blank">
-                  <div class="article-title">4 Things I Learned from 4 Weeks of PM</div>
-                </a>
-                <p>I’m a developer at heart. But thanks to the Microsoft Explore Program, I had the opportunity to fully step in the shoes of a project manager and experience what it really means to be a PM. Here are the 4 most important lessons I learned.</p>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> June 6, 2019</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 48</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 6</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 1</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/beyond-hackathon-td-level-up-quest-lily-liu/" target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article3.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/beyond-hackathon-td-level-up-quest-lily-liu/" target="_blank">
-                  <span class="article-title">Beyond the Hackathon: TD Level Up Quest</span>
-                </a>
+                <span class="article-title">Beyond the Hackathon: TD Level Up Quest</span>
               </div>
-              <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> Sept. 5, 2018</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 133</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 4</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 3</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/beyond-hackathon-td-level-up-quest-lily-liu/" target="_blank">
-                  <div class="article-title">Beyond the Hackathon: TD Level Up Quest</div>
-                </a>
-                <p>I've participated in many hackathons, but this is the first time I've moved beyond the hackathon stage. Learn about my experience transforming a winning hackathon idea from a proof-of-concept to a viable product.</p>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> Sept. 5, 2018</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 134</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 4</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 3</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/"
+              target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article2.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
-                  <span class="article-title">Think Big: Lessons from Google Cloud Sprint</span>
-                </a>
+                <span class="article-title">Think Big: Lessons from Google Cloud Sprint</span>
               </div>
-              <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> July 2, 2018</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 78</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 5</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/think-big-lessons-from-google-cloud-sprint-lily-liu/" target="_blank">
-                  <div class="article-title">Think Big: Lessons from Google Cloud Sprint</div>
-                </a>
-                <p>Google Cloud Sprint taught me that amazing things can happen (literally overnight) if you have a strong group of talented individuals that are fully committed to working together as a team to deliver an excellent product.</p>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> July 2, 2018</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 80</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 5</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="grid-item">
-            <div class="card round">
+        <div class="grid-item">
+          <div class="card round">
+            <a href="https://www.linkedin.com/pulse/how-i-learned-machine-learning-three-days-microsoft-openhack-lily-liu/"
+              target="_blank">
               <div class="card-image">
                 <img class="activator" src="images/writings/article1.jpg">
               </div>
               <div class="card-content">
-                <a href="https://www.linkedin.com/pulse/how-i-learned-machine-learning-three-days-microsoft-openhack-lily-liu/" target="_blank">
-                  <span class="article-title">How I Learned Machine Learning in Three Days: Microsoft OpenHack</span>
-                </a>
+                <span class="article-title">How I Learned Machine Learning in Three Days: Microsoft OpenHack</span>
+              </div>
+            </a>
+            <div class="card-action">
+              <span class="date"><span class="hide-on-extra-small-only">Published</span> June 11, 2018</span>
+              <div class="article-stats">
+                <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 50</span>
+                <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
+                <span><img class="icon" src="icons/dark_2x/share.png" /> 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact" class="scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h2 class="section-title">Contact</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10 offset-s1 m12 l10 offset-l1 xl8 offset-xl2">
+
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/contact/profile-square.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="heading">
+                  <img class="logo-icon" src="images/intro/icon.png">
+                  <h4>Lily Liu</h4>
+                </div>
+                <!-- <h5>Software Engineer</h5> -->
+                <p class="quote">Young, scrappy, and hungry.</p>
               </div>
               <div class="card-action">
-                <span class="date"><span class="hide-on-extra-small-only">Published</span> June 11, 2018</span>
-                <div class="article-stats">
-                  <span><img class="icon" src="icons/dark_2x/thumb_up.png" /> 49</span>
-                  <span><img class="icon" src="icons/dark_2x/comment.png" /> 2</span>
-                  <span><img class="icon" src="icons/dark_2x/share.png" /> 5</span>
-                </div>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title">
-                  <img class="icon" src="icons/dark_2x/close.png" />
-                </span>
-                <a href="https://www.linkedin.com/pulse/how-i-learned-machine-learning-three-days-microsoft-openhack-lily-liu/" target="_blank">
-                  <div class="article-title">How I Learned Machine Learning in Three Days: Microsoft OpenHack</div>
+                <a class="email" href="mailto:thelilyliu@gmail.com">
+                  <img src="images/contact/gmail.svg">
                 </a>
-                <p>Machine learning is a fascinating topic. However, it can seem quite intimidating for beginners. My views changed after attending Microsoft OpenHack. This three-day challenge-based coding event broke down the barriers that were holding me back from building projects using ML.</p>
+                <a class="github" href="https://github.com/thelilyliu" target="_blank">
+                  <img src="images/contact/github.svg">
+                </a>
+                <a class="linkedin" href="https://www.linkedin.com/in/thelilyliu/" target="_blank">
+                  <img src="images/contact/linkedin.svg">
+                </a>
               </div>
             </div>
           </div>
 
         </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
+  <!-- Scripts -->
 
-    <section id="contact" class="scrollspy">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <h2 class="section-title">Contact</h2>
-          </div>
-        </div>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/particles.min.js"></script>
+  <script type="text/javascript" src="js/typeit.min.js"></script>
+  <script type="text/javascript" src="js/waypoints.min.js"></script>
+  <script type="text/javascript" src="js/masonry.min.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
-        <div class="row">
-          <div class="col s10 offset-s1 m12 l10 offset-l1 xl8 offset-xl2">
-            
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="images/contact/profile-square.jpg">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <div class="heading">
-                    <img class="logo-icon" src="images/intro/icon.png">
-                    <h4>Lily Liu</h4>
-                  </div>
-                  <!-- <h5>Software Engineer</h5> -->
-                  <p class="quote">Young, scrappy, and hungry.</p>
-                </div>
-                <div class="card-action">
-                  <a class="email" href="mailto:thelilyliu@gmail.com">
-                    <img src="images/contact/gmail.svg">
-                  </a>
-                  <a class="github" href="https://github.com/thelilyliu" target="_blank">
-                    <img src="images/contact/github.svg">
-                  </a>
-                  <a class="linkedin" href="https://www.linkedin.com/in/thelilyliu/" target="_blank">
-                    <img src="images/contact/linkedin.svg">
-                  </a>
-                </div>
-              </div>
-            </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148101923-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-          </div>
-        </div>
-      </div>
-    </section>
+    gtag('config', 'UA-148101923-1');
+  </script>
 
-    <!-- Scripts -->
+</body>
 
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/particles.min.js"></script>
-    <script type="text/javascript" src="js/typeit.min.js"></script>
-    <script type="text/javascript" src="js/waypoints.min.js"></script>
-    <script type="text/javascript" src="js/masonry.min.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148101923-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-148101923-1');
-    </script>
-
-  </body>
 </html>

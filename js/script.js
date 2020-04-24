@@ -1,13 +1,13 @@
-window.onload = function() {
-  setTimeout(function() {
+window.onload = function () {
+  setTimeout(function () {
     $('.loader-wrap').addClass('loaded')
-    setTimeout(function() {
+    setTimeout(function () {
       $('.loader-wrap').css('display', 'none')
     }, 1000)
   }, 1000)
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   initMobile()
   initMaterialize()
   initParticles()
@@ -55,7 +55,7 @@ let $contactImg = $('#contact .card-image img')
 
 function initMobile() {
   let ua = navigator.userAgent.toLowerCase();
-  let isMacSafari =  /Safari/i.test(ua) && /Apple Computer/.test(navigator.vendor) && !/Mobi|Android/i.test(ua)
+  let isMacSafari = /Safari/i.test(ua) && /Apple Computer/.test(navigator.vendor) && !/Mobi|Android/i.test(ua)
   let isMobile = /iphone|ipad|ipod|android|blackberry|windows phone|webos|IEMobile|Opera Mini/i.test(ua)
   let isIpad = ua.indexOf('ipad') != -1 || (ua.indexOf('macintosh') > -1 && 'ontouchend' in document)
 
@@ -63,9 +63,10 @@ function initMobile() {
   if (isMobile) {
     let height = $(window).height()
     $('section#intro').css('height', height)
-    $body.addClass('mobile')    
+    $('section#contact').css('height', '100%')
+    $body.addClass('mobile')
   }
-  
+
   if (isMacSafari) {
     $body.addClass('mac')
   }
@@ -73,13 +74,13 @@ function initMobile() {
 
 function initMaterialize() {
   let elems = document.querySelectorAll('.scrollspy')
-  
+
   let options = {
-    getActiveElement: function(id) {
+    getActiveElement: function (id) {
       return 'a[scroll-target="#' + id + '"]'
     }
   }
-  
+
   M.ScrollSpy.init(elems, options)
 
   $('.tap-target').tapTarget()
@@ -204,13 +205,41 @@ function initParticles() {
   })
 }
 
+function pauseParticles() {
+  if (pJSDom[0].pJS.particles.move.enable) {
+    pJSDom[0].pJS.particles.move.enable = false
+  }
+}
+
+function playParticles() {
+  if (!pJSDom[0].pJS.particles.move.enable) {
+    pJSDom[0].pJS.particles.move.enable = true
+    pJSDom[0].pJS.fn.particlesRefresh()
+  }
+}
+
+function destroyParticles() {
+  pJSDom[0].pJS.fn.vendors.destroypJS()
+}
+
+let interval = setInterval(function(){
+  if (document.documentElement.clientHeight > window.pageYOffset)
+    playParticles()
+  else
+    pauseParticles()
+}, 100)
+
+setTimeout(function () {
+  clearInterval(interval)
+  destroyParticles()
+}, 600000)
+
 function initTypeIt() {
   new TypeIt('#typeit-roles', {
     strings: [
       'Software Engineer',
       'Program Manager',
       'Keynote Speaker',
-      'Hackathon Lover',
       'Aspiring Writer'
     ],
     speed: 100,
@@ -224,7 +253,7 @@ function initTypeIt() {
 
 function initMasonry() {
   // init Masonry after all images have loaded
-  let $grid = $('.grid').imagesLoaded(function() {
+  let $grid = $('.grid').imagesLoaded(function () {
     $grid.masonry({
       itemSelector: '.grid-item',
       columnWidth: '.grid-sizer',
@@ -234,7 +263,7 @@ function initMasonry() {
 }
 
 function initEventHandler() {
-  $('a.scroll').on('click', function(e) {
+  $('a.scroll').on('click', function (e) {
     let $this = $(this)
     let target = $(this.getAttribute('scroll-target'))
 
@@ -250,7 +279,7 @@ function initEventHandler() {
     }
   })
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     let timeout = false // holder for timeout ID
     let delay = 500 // delay after event is "complete" to run callback
 
